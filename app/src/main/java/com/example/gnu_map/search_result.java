@@ -1,5 +1,6 @@
 package com.example.gnu_map;
 
+import android.util.Log;
 import android.widget.Button;
 import android.content.Intent;
 import android.os.Bundle;
@@ -17,12 +18,15 @@ import java.util.List;
 public class search_result extends AppCompatActivity {
     private RecyclerView recyclerView;
     private CustomAdapter adapter;
+    private TextView noDataTextView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.search_result);
 
+        // "정보가 없습니다." 텍스트를 나타내는 TextView 초기화
+        noDataTextView = findViewById(R.id.no_data_textview);
 
         //뒤로가기 버튼
         ImageButton go_main_bt = (ImageButton) findViewById(R.id.go_main_bt);
@@ -39,7 +43,6 @@ public class search_result extends AppCompatActivity {
             }
         });
 
-
         recyclerView = findViewById(R.id.recyclerView);
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
@@ -49,14 +52,18 @@ public class search_result extends AppCompatActivity {
         if (searchResultsList != null) {
             adapter = new CustomAdapter(searchResultsList, this);
             recyclerView.setAdapter(adapter);
+            Log.d("INFO_TAG", "검색된 정보의 개수: " + adapter.getItemCount());
+
+            if(searchResultsList.size() == 0)
+            {
+                noDataTextView.setVisibility(View.VISIBLE);
+                recyclerView.setVisibility(View.GONE);
+                Log.d("INFO_TAG", "검색된 정보 없음: " + adapter.getItemCount());
+            }
         }
 
-
-
-
-
-        CustomAdapter adapter = new CustomAdapter(searchResultsList, this);
-        recyclerView.setAdapter(adapter);
+//        CustomAdapter adapter = new CustomAdapter(searchResultsList, this);
+//        recyclerView.setAdapter(adapter);
 
         adapter.setOnItemClickListener(new CustomAdapter.OnItemClickListener() {
             @Override
@@ -66,10 +73,5 @@ public class search_result extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-
-
-
-
-
     }
 }

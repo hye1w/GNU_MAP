@@ -13,6 +13,8 @@
         android:orientation="horizontal"
         android:paddingBottom="10dp"
         android:paddingTop="10dp"
+        android:paddingLeft="15dp"
+        android:layout_marginBottom="10dp"
         android:background="@drawable/border_make" >
 
         <androidx.cardview.widget.CardView
@@ -34,7 +36,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="35dp"
-            android:layout_marginLeft="5dp"
+            android:layout_marginLeft="10dp"
             android:orientation="vertical">
 
 

@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "175473967529",
+    "project_id": "gmap-f88d5",
+    "storage_bucket": "gmap-f88d5.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:175473967529:android:d0c12def3c1f3f28eb84b8",
+        "android_client_info": {
+          "package_name": "com.example.gnu_map"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDlmXTiJM5zfHQdqTxyZNVgpzRHpNLBD7I"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,5 @@
+id,building_name,building_num,building_x,building_y,building_img
+1,교양학관,24,35.1521,128.0991,GNU_map\app\src\main\res\drawable\map_img\24_img.jpg
+2,스타벅스,1,35.1525,128.1056,GNU_map\app\src\main\res\drawable\map_img\2_img.jpg
+3,개양중학교,2,35.1608,128.1097,GNU_map\app\src\main\res\drawable\map_img\25_img.jpg
+4,교양 ,100,35.1115,128.1888,GNU_map\app\src\main\res\drawable\map_img\1_img.jpg

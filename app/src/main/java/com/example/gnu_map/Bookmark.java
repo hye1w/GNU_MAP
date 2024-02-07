@@ -1,26 +1,59 @@
 package com.example.gnu_map;
 
-public class Bookmark {
+import android.os.Parcel;
+import android.os.Parcelable;
 
-        private String buildingImg;
-        private String buildingNum;
-        private String buildingName;
+public class Bookmark implements Parcelable {
+    private String buildingImg;
+    private String buildingNum;
+    private String buildingName;
 
-        Bookmark(String buildingImg, String buildingNum, String buildingName) {
-            this.buildingImg = buildingImg;
-            this.buildingNum = buildingNum;
-            this.buildingName = buildingName;
+    public Bookmark(String buildingImg, String buildingNum, String buildingName) {
+        this.buildingImg = buildingImg;
+        this.buildingNum = buildingNum;
+        this.buildingName = buildingName;
+    }
+
+    protected Bookmark(Parcel in) {
+        buildingImg = in.readString();
+        buildingNum = in.readString();
+        buildingName = in.readString();
+    }
+
+    public static final Creator<Bookmark> CREATOR = new Creator<Bookmark>() {
+        @Override
+        public Bookmark createFromParcel(Parcel in) {
+            return new Bookmark(in);
         }
 
-        String getBuildingImg() {
-            return buildingImg;
+        @Override
+        public Bookmark[] newArray(int size) {
+            return new Bookmark[size];
         }
+    };
 
-        String getBuildingNum() {
-            return buildingNum;
-        }
+    public String getBuildingImg() {
+        return buildingImg;
+    }
 
-        String getBuildingName() {
-            return buildingName;
-        }
+    public String getBuildingNum() {
+        return buildingNum;
+    }
+
+    public String getBuildingName() {
+        return buildingName;
+    }
+
+    @Override
+    public int describeContents() {
+        return 0;
+    }
+
+    @Override
+    public void writeToParcel(Parcel dest, int flags) {
+        dest.writeString(buildingImg);
+        dest.writeString(buildingNum);
+        dest.writeString(buildingName);
+    }
 }
+

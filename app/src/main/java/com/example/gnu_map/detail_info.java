@@ -63,9 +63,6 @@ public class detail_info extends AppCompatActivity {
     private String buildingNum;
     private String buildingImg;
 
-
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -186,12 +183,6 @@ public class detail_info extends AppCompatActivity {
             });
         }
     }
-
-
-
-
-
-
 
     // 로컬에 즐겨찾기 정보 저장
     private void saveBookmark(Buildings building) {

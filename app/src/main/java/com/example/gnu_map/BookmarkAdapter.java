@@ -43,6 +43,7 @@ public class BookmarkAdapter extends RecyclerView.Adapter<BookmarkAdapter.ViewHo
     }
 
 
+
     static class ViewHolder extends RecyclerView.ViewHolder {
         private ImageView building_img;
         private TextView buildingNameTextView;

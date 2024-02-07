@@ -2,12 +2,14 @@ package com.example.gnu_map;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.GridLayoutManager;
-import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+import androidx.recyclerview.widget.LinearLayoutManager;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
+import android.widget.Button;
 import android.widget.SearchView;
 
 //import com.google.android.gms.maps.MapView;
@@ -92,8 +94,6 @@ public class MainActivity extends AppCompatActivity {
         // 줌 아웃
         mapView1.zoomOut(true);
 
-
-
         bookmarkRecyclerView = findViewById(R.id.bookmark_recycler);
         GridLayoutManager layoutManager = new GridLayoutManager(this, 1, GridLayoutManager.HORIZONTAL, false);
 
@@ -107,6 +107,18 @@ public class MainActivity extends AppCompatActivity {
 
         FirebaseDatabase database = FirebaseDatabase.getInstance();
         DatabaseReference bookmarkRef = database.getReference("Bookmark");
+
+        Button locationButton = findViewById(R.id.locationbutton);
+
+        // locationbutton 버튼 클릭 리스너 설정
+        locationButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // 버튼이 클릭되었을 때 호출될 메서드 호출
+                setLocation();
+            }
+        });
+
 
         bookmarkRef.addValueEventListener(new ValueEventListener() {
             @Override
@@ -128,7 +140,13 @@ public class MainActivity extends AppCompatActivity {
                 // 데이터를 불러오지 못한 경우의 처리
             }
         });
+    }
 
+    // GNU버튼 지도 위치 리셋
+    private void setLocation() {
+        // 지도의 중심을 변경
+        mapView1.setMapCenterPoint(MapPoint.mapPointWithGeoCoord(35.15412303, 128.0988896), true);
+        mapView1.setZoomLevel(2, true);
     }
 
 
@@ -175,9 +193,7 @@ public class MainActivity extends AppCompatActivity {
                 Log.e("MainActivity", "Error searching buildings by name: " + databaseError.getMessage());
             }
         });
+
     }
-
-
-
 
 }

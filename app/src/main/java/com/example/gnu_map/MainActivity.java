@@ -47,7 +47,7 @@ public class MainActivity extends AppCompatActivity {
 
 
     private SearchView searchView;
-    MapView mapView1;
+    private MapView mapView1;
     RelativeLayout mapViewContainer1;
 
 
@@ -195,5 +195,21 @@ public class MainActivity extends AppCompatActivity {
         });
 
     }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        if (mapViewContainer1 != null) {
+            mapViewContainer1.removeAllViews();
+        }
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        mapView1.setMapCenterPoint(MapPoint.mapPointWithGeoCoord(35.15412303, 128.0988896), true); // 맵의 중심점 설정
+        mapView1.setZoomLevel(2, true); // 맵의 줌 레벨 설정
+    }
+
 
 }

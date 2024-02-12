@@ -29,6 +29,7 @@
         </activity>
         <activity android:name=".search_result"/>
         <activity android:name=".detail_info"/>
+        <activity android:name=".detail_bookmark"/>
 
         <meta-data
             android:name="com.kakao.sdk.AppKey"

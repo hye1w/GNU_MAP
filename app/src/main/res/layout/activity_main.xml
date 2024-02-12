@@ -5,33 +5,40 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#00FFFFFF"
+    android:backgroundTint="#00FFFFFF"
     android:orientation="vertical"
     tools:context=".MainActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_margin="20dp">
+        android:layout_margin="20dp"
+        android:orientation="horizontal">
 
-        <TextView
+        <Button
+            android:id="@+id/locationbutton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="GNU MAP"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginEnd="5dp"
+            android:layout_marginBottom="5dp"
+            android:layout_marginRight="5dp"
             android:fontFamily="@font/nanumsquare_extrab"
+            android:background="@android:color/transparent"
+            android:outlineProvider="background"
+            android:text="GNU MAP"
             android:textColor="@color/black"
-            android:textSize="25sp"
-            android:layout_marginTop="12dp"
-            android:layout_marginRight="10dp"
-            android:layout_marginBottom="10dp"
-            android:layout_marginLeft="0dp"/>
+            android:textSize="25sp" />
+
 
         <androidx.cardview.widget.CardView
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
             android:layout_weight="1"
-            app:cardCornerRadius="15dp"
-            android:layout_marginStart="10dp">
+            app:cardCornerRadius="15dp">
 
             <SearchView
                 android:id="@+id/searchView"
@@ -39,8 +46,8 @@
                 android:layout_height="wrap_content"
                 android:background="@color/gray"
                 android:iconifiedByDefault="false"
-                android:queryHint="건물명 또는 건물번호로 검색"
-                android:queryBackground="@null"/>
+                android:queryBackground="@null"
+                android:queryHint="건물명 또는 건물번호로 검색" />
 
         </androidx.cardview.widget.CardView>
 
@@ -58,21 +65,8 @@
             android:layout_width="match_parent"
             android:layout_height="400dp"
             android:layout_marginLeft="20dp"
-            android:layout_marginRight="20dp"
-            >
+            android:layout_marginRight="20dp">
 
-            <Button
-                android:id="@+id/locationbutton"
-                android:layout_width="70dp"
-                android:layout_height="50dp"
-                android:layout_alignParentEnd="true"
-                android:layout_alignParentBottom="true"
-                android:layout_marginEnd="5dp"
-                android:layout_marginBottom="5dp"
-                android:textSize="21sp"
-                android:fontFamily="@font/nanumsquare_extrab"
-                android:textColor="@color/black"
-                android:text="GNU" />
         </RelativeLayout>
 
     </LinearLayout>
@@ -80,8 +74,8 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
         android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
         android:layout_marginRight="20dp"
         android:orientation="vertical">
 
@@ -111,20 +105,19 @@
     </LinearLayout>
 
     <!--    <LinearLayout-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="300dp"  >-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="300dp"  >-->
 
-<!--        <androidx.recyclerview.widget.RecyclerView-->
-<!--            android:id="@+id/recyclerView"-->
-<!--            android:layout_width="match_parent"-->
-<!--            android:layout_height="match_parent"-->
-<!--            android:divider="@android:color/darker_gray"-->
-<!--            android:dividerHeight="1dp"-->
-<!--            android:padding="16dp" />-->
+    <!--        <androidx.recyclerview.widget.RecyclerView-->
+    <!--            android:id="@+id/recyclerView"-->
+    <!--            android:layout_width="match_parent"-->
+    <!--            android:layout_height="match_parent"-->
+    <!--            android:divider="@android:color/darker_gray"-->
+    <!--            android:dividerHeight="1dp"-->
+    <!--            android:padding="16dp" />-->
 
 
-
-<!--    </LinearLayout>-->
+    <!--    </LinearLayout>-->
 
 
 </LinearLayout>

@@ -197,6 +197,22 @@ public class detail_info extends AppCompatActivity {
     }
 
 
+    @Override
+    protected void onPause() {
+        super.onPause();
+        if (mapViewContainer != null) {
+            mapViewContainer.removeAllViews();
+        }
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        // 지도가 이미 추가되어 있는지 확인하고 추가되어 있지 않으면 다시 추가
+        if (mapViewContainer.getChildCount() == 0) {
+            mapViewContainer.addView(mapView1);
+        }
+    }
 
 
 //    @Override

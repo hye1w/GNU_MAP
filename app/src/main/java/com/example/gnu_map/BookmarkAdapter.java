@@ -1,5 +1,7 @@
 package com.example.gnu_map;
 
+import android.content.Intent;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -30,11 +32,8 @@ public class BookmarkAdapter extends RecyclerView.Adapter<BookmarkAdapter.ViewHo
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-        Glide.with(holder.itemView)
-                .load(bookmarkList.get(position).getBuildingImg())
-                .into(holder.building_img);
-        holder.buildingNameTextView.setText(bookmarkList.get(position).getBuildingName());
-        holder.buildingNumTextView.setText(String.valueOf(bookmarkList.get(position).getBuildingNum() + "동"));
+        Bookmark bookmark = bookmarkList.get(position);
+        holder.bind(bookmark);
     }
 
     @Override
@@ -42,9 +41,7 @@ public class BookmarkAdapter extends RecyclerView.Adapter<BookmarkAdapter.ViewHo
         return bookmarkList.size();
     }
 
-
-
-    static class ViewHolder extends RecyclerView.ViewHolder {
+    class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
         private ImageView building_img;
         private TextView buildingNameTextView;
         private TextView buildingNumTextView;
@@ -54,11 +51,35 @@ public class BookmarkAdapter extends RecyclerView.Adapter<BookmarkAdapter.ViewHo
             this.building_img = itemView.findViewById(R.id.building_img);
             this.buildingNameTextView = itemView.findViewById(R.id.buildingname_text);
             this.buildingNumTextView = itemView.findViewById(R.id.buildingnum_text);
+
+            // 클릭 리스너 설정
+            itemView.setOnClickListener(this);
         }
 
         void bind(Bookmark bookmark) {
+            Glide.with(itemView)
+                    .load(bookmark.getBuildingImg())
+                    .into(building_img);
             buildingNameTextView.setText(bookmark.getBuildingName());
-            buildingNumTextView.setText(bookmark.getBuildingNum());
+            buildingNumTextView.setText(String.valueOf(bookmark.getBuildingNum() + "동"));
+        }
+
+        @Override
+        public void onClick(View view) {
+            int position = getAdapterPosition();
+            if (position != RecyclerView.NO_POSITION) {
+                // 선택된 항목의 건물명 가져오기
+                String selectedBuildingName = bookmarkList.get(position).getBuildingName();
+                String selectedBuildingNum = bookmarkList.get(position).getBuildingNum();
+                // Logcat에 출력
+                Log.d("SelectedBuildingName", "선택된 건물명: " + selectedBuildingName);
+                Log.d("SelectedBuildingNum", "선택된 건물번호: " + selectedBuildingNum);
+
+                // Intent를 통해 detail_bookmark 화면으로 건물 번호 전달
+                Intent intent = new Intent(view.getContext(), detail_bookmark.class);
+                intent.putExtra("selected_building_num", selectedBuildingNum);
+                view.getContext().startActivity(intent);
+            }
         }
     }
 }

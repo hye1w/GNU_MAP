@@ -8,6 +8,9 @@ public class Bookmark implements Parcelable {
     private String buildingNum;
     private String buildingName;
 
+    public Bookmark() {
+        // 기본 생성자
+    }
     public Bookmark(String buildingImg, String buildingNum, String buildingName) {
         this.buildingImg = buildingImg;
         this.buildingNum = buildingNum;

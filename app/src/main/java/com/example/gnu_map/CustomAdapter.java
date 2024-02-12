@@ -57,7 +57,6 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.CustomView
 
 
 
-        //추가
         holder.itemView.setOnClickListener(view -> {
             if (listener != null) {
                 listener.onItemClick(arrayList.get(position));

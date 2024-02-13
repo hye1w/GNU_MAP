@@ -30,6 +30,7 @@ import com.google.firebase.database.ValueEventListener;
 
 
 import android.widget.RelativeLayout;
+import android.widget.TextView;
 
 import net.daum.mf.map.api.MapPoint;
 import net.daum.mf.map.api.MapView;
@@ -55,11 +56,13 @@ public class MainActivity extends AppCompatActivity {
     private RecyclerView bookmarkRecyclerView;
     private List<Bookmark> bookmarkList;
     private BookmarkAdapter adapter;
-
+    private TextView noBookmarkView;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        noBookmarkView = findViewById(R.id.no_bookmark_textview);
 
         // SearchView 초기화
         searchView = findViewById(R.id.searchView);
@@ -133,6 +136,17 @@ public class MainActivity extends AppCompatActivity {
                     bookmarkList.add(bookmark);
                 }
                 adapter.notifyDataSetChanged();
+
+                if (dataSnapshot.exists()) {
+                    Log.d("즐겨찾기text", "즐겨찾기 목록 있음");
+                    noBookmarkView.setVisibility(View.GONE);
+                    bookmarkRecyclerView.setVisibility(View.VISIBLE);
+                } else {
+                    Log.d("즐겨찾기text", "즐겨찾기 목록 없음");
+                    noBookmarkView.setVisibility(View.VISIBLE);
+                    bookmarkRecyclerView.setVisibility(View.GONE);
+                }
+
             }
 
             @Override

@@ -62,6 +62,8 @@ public class detail_info extends AppCompatActivity {
     private String buildingName;
     private String buildingNum;
     private String buildingImg;
+    private double buildingX;
+    private double buildingY;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -101,6 +103,8 @@ public class detail_info extends AppCompatActivity {
                 buildingName = selectedBuilding.getBuilding_name();
                 buildingNum = String.valueOf(selectedBuilding.getBuilding_num());
                 buildingImg = selectedBuilding.getBuilding_img();
+                buildingX = selectedBuilding.getBuilding_x();
+                buildingY = selectedBuilding.getBuilding_y();
 
                 buildingNameTextView.setText(buildingName);
 
@@ -172,6 +176,8 @@ public class detail_info extends AppCompatActivity {
                         newBookmarkRef.child("building_name").setValue(buildingName);
                         newBookmarkRef.child("building_num").setValue(buildingNum);
                         newBookmarkRef.child("building_img").setValue(buildingImg);
+                        newBookmarkRef.child("building_x").setValue(buildingX);
+                        newBookmarkRef.child("building_y").setValue(buildingY);
                         bookmarkButton.setImageResource(R.drawable.heart_full); // 이미지 변경
                     }
                 }

@@ -56,7 +56,8 @@ public class detail_bookmark extends AppCompatActivity {
         b_go_main_bt.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                onBackPressed();
+                Intent intent = new Intent(detail_bookmark.this, MainActivity.class);
+                startActivity(intent);
             }
         });
 

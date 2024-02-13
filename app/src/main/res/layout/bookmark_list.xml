@@ -15,8 +15,8 @@
         android:paddingTop="5dp"  >
 
         <androidx.cardview.widget.CardView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="80dp"
+            android:layout_height="120dp"
             android:layout_margin="5dp"
             app:cardCornerRadius="30dp" >
 
@@ -50,8 +50,13 @@
 
                 <TextView
                     android:id="@+id/buildingname_text"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:ellipsize="marquee"
+                    android:gravity="center"
+                    android:hapticFeedbackEnabled="false"
+                    android:maxLines="2"
                     android:text="건물명"
                     android:textColor="@color/white"
                     android:textSize="13dp"

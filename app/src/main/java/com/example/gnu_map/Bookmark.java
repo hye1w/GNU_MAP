@@ -7,20 +7,22 @@ public class Bookmark implements Parcelable {
     private String buildingImg;
     private String buildingNum;
     private String buildingName;
-
+    private String campus;
     public Bookmark() {
         // 기본 생성자
     }
-    public Bookmark(String buildingImg, String buildingNum, String buildingName) {
+    public Bookmark(String buildingImg, String buildingNum, String buildingName, String campus) {
         this.buildingImg = buildingImg;
         this.buildingNum = buildingNum;
         this.buildingName = buildingName;
+        this.campus = campus;
     }
 
     protected Bookmark(Parcel in) {
         buildingImg = in.readString();
         buildingNum = in.readString();
         buildingName = in.readString();
+        campus = in.readString();
     }
 
     public static final Creator<Bookmark> CREATOR = new Creator<Bookmark>() {
@@ -47,6 +49,9 @@ public class Bookmark implements Parcelable {
         return buildingName;
     }
 
+    public String getCampus() {
+        return campus;
+    }
     @Override
     public int describeContents() {
         return 0;
@@ -57,6 +62,7 @@ public class Bookmark implements Parcelable {
         dest.writeString(buildingImg);
         dest.writeString(buildingNum);
         dest.writeString(buildingName);
+        dest.writeString(campus);
     }
 }
 

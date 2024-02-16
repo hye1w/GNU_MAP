@@ -52,7 +52,6 @@ public class detail_info extends AppCompatActivity {
     private TextView buildingNameTextView;
     private MapView mapView1;
     RelativeLayout mapViewContainer;
-
 //    private ViewGroup mapViewContainer1;
 //    private double currentLatitude;
 //    private double currentLongitude;
@@ -64,12 +63,11 @@ public class detail_info extends AppCompatActivity {
     private String buildingImg;
     private double buildingX;
     private double buildingY;
-
+    private String campus;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.detail_info);
-
 
         //뒤로가기 버튼
         ImageButton go_main_bt = (ImageButton) findViewById(R.id.go_search_bt);
@@ -98,6 +96,7 @@ public class detail_info extends AppCompatActivity {
         Intent intent = getIntent();
         if (intent != null) {
             Buildings selectedBuilding = intent.getParcelableExtra("selected_building");
+            campus = intent.getStringExtra("selected_campus");
 
             if (selectedBuilding != null) {
                 buildingName = selectedBuilding.getBuilding_name();
@@ -105,18 +104,21 @@ public class detail_info extends AppCompatActivity {
                 buildingImg = selectedBuilding.getBuilding_img();
                 buildingX = selectedBuilding.getBuilding_x();
                 buildingY = selectedBuilding.getBuilding_y();
+                campus = selectedBuilding.getCampus();
 
                 buildingNameTextView.setText(buildingName);
 
                 // Check if the building is already bookmarked
-                DatabaseReference newBookmarkRef = databaseReference.child(buildingNum);
+                DatabaseReference newBookmarkRef = databaseReference.child(campus).child(buildingNum);
                 newBookmarkRef.addListenerForSingleValueEvent(new ValueEventListener() {
                     @Override
                     public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                         if (dataSnapshot.exists()) {
                             bookmarkButton.setImageResource(R.drawable.heart_full);
+                            isBookmarked = true;
                         } else {
                             bookmarkButton.setImageResource(R.drawable.heart_empty);
+                            isBookmarked = false;
                         }
                     }
                     @Override
@@ -124,7 +126,6 @@ public class detail_info extends AppCompatActivity {
                         // Error handling
                     }
                 });
-
 
                 buildingNameTextView.setText(selectedBuilding.getBuilding_name());
                 String name = selectedBuilding.getBuilding_name();
@@ -146,49 +147,81 @@ public class detail_info extends AppCompatActivity {
             }
         }
 
-
         // 즐겨찾기 버튼 클릭 시 동작
         bookmarkButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // 즐겨찾기 추가 또는 제거 동작을 수행하는 메소드 호출
                 toggleBookmark();
             }
         });
 
-
     }
+
+//    private void toggleBookmark() {
+//        if (buildingName != null && buildingNum != null && buildingImg != null) {
+//            DatabaseReference newBookmarkRef = databaseReference.child(buildingNum);
+//
+//            newBookmarkRef.addListenerForSingleValueEvent(new ValueEventListener() {
+//                @Override
+//                public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+//                    if (dataSnapshot.exists()) {
+//                        String bookmarkedCampus = dataSnapshot.child("campus").getValue(String.class);
+//                        if (campus.equals(bookmarkedCampus)) {
+//                            // 현재 선택된 캠퍼스와 즐겨찾기에 추가된 건물의 캠퍼스가 일치하는 경우에만 즐겨찾기 삭제
+//                            dataSnapshot.getRef().removeValue();
+//                            bookmarkButton.setImageResource(R.drawable.heart_empty); // 이미지 변경
+//                        } else {
+//                            // 현재 선택된 캠퍼스와 즐겨찾기에 추가된 건물의 캠퍼스가 일치하지 않으면 안내 메시지 또는 다른 처리 수행
+//                            // 여기에 처리를 추가하세요
+//                        }
+//                    } else {
+//                        // 즐겨찾기에 추가되지 않은 경우 추가
+//                        newBookmarkRef.child("building_name").setValue(buildingName);
+//                        newBookmarkRef.child("building_num").setValue(buildingNum);
+//                        newBookmarkRef.child("building_img").setValue(buildingImg);
+//                        newBookmarkRef.child("building_x").setValue(buildingX);
+//                        newBookmarkRef.child("building_y").setValue(buildingY);
+//                        newBookmarkRef.child("campus").setValue(campus);
+//                        bookmarkButton.setImageResource(R.drawable.heart_full); // 이미지 변경
+//
+//                    }
+//                }
+//
+//                @Override
+//                public void onCancelled(@NonNull DatabaseError databaseError) {
+//                    // 에러 처리
+//                }
+//            });
+//        }
+//    }
 
 
 
     private void toggleBookmark() {
-        if (buildingName != null && buildingNum != null && buildingImg != null) {
-            DatabaseReference newBookmarkRef = databaseReference.child(buildingNum);
-            newBookmarkRef.addListenerForSingleValueEvent(new ValueEventListener() {
-                @Override
-                public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                    if (dataSnapshot.exists()) {
-                        // 이미 즐겨찾기에 추가된 경우 삭제
-                        dataSnapshot.getRef().removeValue();
-                        bookmarkButton.setImageResource(R.drawable.heart_empty); // 이미지 변경
-                    } else {
-                        // 즐겨찾기에 추가되지 않은 경우 추가
-                        newBookmarkRef.child("building_name").setValue(buildingName);
-                        newBookmarkRef.child("building_num").setValue(buildingNum);
-                        newBookmarkRef.child("building_img").setValue(buildingImg);
-                        newBookmarkRef.child("building_x").setValue(buildingX);
-                        newBookmarkRef.child("building_y").setValue(buildingY);
-                        bookmarkButton.setImageResource(R.drawable.heart_full); // 이미지 변경
-                    }
-                }
-
-                @Override
-                public void onCancelled(@NonNull DatabaseError databaseError) {
-                    // 에러 처리
-                }
-            });
+        DatabaseReference newBookmarkRef = databaseReference.child(campus).child(buildingNum);
+        if (isBookmarked) {
+            // 즐겨찾기 삭제
+            newBookmarkRef.removeValue();
+            bookmarkButton.setImageResource(R.drawable.heart_empty);
+            isBookmarked = false;
+        } else {
+            newBookmarkRef.child("building_name").setValue(buildingName);
+            newBookmarkRef.child("building_num").setValue(buildingNum);
+            newBookmarkRef.child("building_img").setValue(buildingImg);
+            newBookmarkRef.child("building_x").setValue(buildingX);
+            newBookmarkRef.child("building_y").setValue(buildingY);
+            newBookmarkRef.child("campus").setValue(campus);
+            bookmarkButton.setImageResource(R.drawable.heart_full);
+            isBookmarked = true;
         }
     }
+
+
+
+
+
+
+
 
     // 로컬에 즐겨찾기 정보 저장
     private void saveBookmark(Buildings building) {

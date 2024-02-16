@@ -11,7 +11,7 @@ public class Buildings implements Parcelable {
     private Double building_y;
     private String building_img;
 
-
+    private String campus;
 
     public Buildings() {
     }
@@ -30,6 +30,7 @@ public class Buildings implements Parcelable {
             building_y = in.readDouble();
         }
         building_img = in.readString();
+        campus = in.readString();
     }
 
 
@@ -67,6 +68,7 @@ public class Buildings implements Parcelable {
             dest.writeDouble(building_y);
         }
         dest.writeString(building_img);
+        dest.writeString(campus);
     }
 
 
@@ -109,4 +111,14 @@ public class Buildings implements Parcelable {
     public void setBuilding_img(String building_img) {
         this.building_img = building_img;
     }
+
+    public String getCampus() {
+        return campus;
+    }
+
+    public void setCampus(String campus) {
+        this.campus = campus;
+    }
+
+
 }

@@ -49,22 +49,28 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.CustomView
 
     @Override
     public void onBindViewHolder(@NonNull CustomViewHolder holder, int position) {
-        Glide.with(holder.itemView)
-                .load(arrayList.get(position).getBuilding_img())
-                .into(holder.building_img);
-        holder.buildingname_text.setText(arrayList.get(position).getBuilding_name());
-        holder.buildingnum_text.setText(String.valueOf(arrayList.get(position).getBuilding_num() + "동"));
-
-
+        Buildings building = arrayList.get(position);
+        if (building.getBuilding_num() != 1000 && building.getBuilding_num() != 1001 && building.getBuilding_num() != 1002) { // building_num이 1000이 아닌 경우
+            Glide.with(holder.itemView)
+                    .load(building.getBuilding_img())
+                    .into(holder.building_img);
+            holder.buildingname_text.setText(building.getBuilding_name());
+            holder.buildingnum_text.setText(String.valueOf(building.getBuilding_num() + "동"));
+        } else { // building_num이 1000인 경우
+            Glide.with(holder.itemView)
+                    .load(building.getBuilding_img())
+                    .into(holder.building_img);
+            holder.buildingname_text.setText(building.getBuilding_name());
+            holder.buildingnum_text.setVisibility(View.GONE);
+        }
 
         holder.itemView.setOnClickListener(view -> {
             if (listener != null) {
-                listener.onItemClick(arrayList.get(position));
+                listener.onItemClick(building);
             }
         });
-
-
     }
+
 
     @Override
     public int getItemCount() {

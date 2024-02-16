@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="campus_array">
+        <item>가좌캠퍼스</item>
+        <item>칠암캠퍼스</item>
+        <item>통영캠퍼스</item>
+        <item>창원산학캠퍼스</item>
+        <item>내동캠퍼스</item>
+    </string-array>
+</resources>

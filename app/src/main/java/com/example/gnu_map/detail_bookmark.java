@@ -24,15 +24,17 @@ import net.daum.mf.map.api.MapView;
 public class detail_bookmark extends AppCompatActivity {
     private FirebaseDatabase database;
     private DatabaseReference bookmarkReference;
-    private DatabaseReference buildingDataReference;
     private TextView b_buildingNameTextView;
     private MapView b_mapView1;
     RelativeLayout b_mapViewContainer;
 
     private ImageButton b_bookmarkButton;
-    private boolean b_isBookmarked = false;
     private String b_buildingNum;
     private String b_buildingImg;
+    private double longitude;
+    private double latitude;
+    private String b_campus;
+    // Remove b_isBookmarked variable and its getter method
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,7 +44,6 @@ public class detail_bookmark extends AppCompatActivity {
         // Initialize Firebase database references
         database = FirebaseDatabase.getInstance();
         bookmarkReference = database.getReference("Bookmark");
-        buildingDataReference = database.getReference("Buildingdata");
 
         // Initialize UI components
         b_buildingNameTextView = findViewById(R.id.b_detail_buildingname);
@@ -65,11 +66,12 @@ public class detail_bookmark extends AppCompatActivity {
         Intent intent = getIntent();
         if (intent != null) {
             b_buildingNum = intent.getStringExtra("selected_building_num");
+            b_campus = intent.getStringExtra("selected_campus");
 
             // Check if the building number is not null
             if (b_buildingNum != null) {
                 // Retrieve building information from Bookmark database
-                bookmarkReference.child(b_buildingNum).addListenerForSingleValueEvent(new ValueEventListener() {
+                bookmarkReference.child(b_campus).child(b_buildingNum).addListenerForSingleValueEvent(new ValueEventListener() {
                     @Override
                     public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                         if (dataSnapshot.exists()) {
@@ -98,7 +100,6 @@ public class detail_bookmark extends AppCompatActivity {
                             marker1.setMarkerType(MapPOIItem.MarkerType.BluePin);
 
                             b_mapView1.addPOIItem(marker1);
-
 
                             // Check if the building is bookmarked
                             b_bookmarkButton.setImageResource(R.drawable.heart_full);
@@ -138,30 +139,33 @@ public class detail_bookmark extends AppCompatActivity {
 
     // Toggle bookmark status
     private void toggleBookmark() {
-        if (b_buildingNum != null && b_buildingImg != null) {
-            DatabaseReference newBookmarkRef = bookmarkReference.child(b_buildingNum);
-            newBookmarkRef.addListenerForSingleValueEvent(new ValueEventListener() {
-                @Override
-                public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                    if (dataSnapshot.exists()) {
-                        // Building is already bookmarked, remove bookmark
-                        dataSnapshot.getRef().removeValue();
-                        b_bookmarkButton.setImageResource(R.drawable.heart_empty); // Change button icon
-                    } else {
-                        // Building is not bookmarked, add bookmark
-                        newBookmarkRef.child("building_name").setValue(b_buildingNameTextView.getText().toString());
-                        newBookmarkRef.child("building_img").setValue(b_buildingImg);
-                        b_bookmarkButton.setImageResource(R.drawable.heart_full); // Change button icon
-                    }
+        DatabaseReference newBookmarkRef = bookmarkReference.child(b_campus).child(b_buildingNum);
+        // Check if the building is bookmarked
+        newBookmarkRef.addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                if (dataSnapshot.exists()) {
+                    // Bookmark exists, remove it
+                    newBookmarkRef.removeValue();
+                    b_bookmarkButton.setImageResource(R.drawable.heart_empty);
+                } else {
+                    // Bookmark doesn't exist, add it
+                    newBookmarkRef.child("building_name").setValue(b_buildingNameTextView.getText().toString());
+                    newBookmarkRef.child("building_num").setValue(b_buildingNum);
+                    newBookmarkRef.child("building_img").setValue(b_buildingImg);
+                    newBookmarkRef.child("building_x").setValue(latitude);
+                    newBookmarkRef.child("building_y").setValue(longitude);
+                    newBookmarkRef.child("campus").setValue(b_campus);
+                    b_bookmarkButton.setImageResource(R.drawable.heart_full);
                 }
+            }
 
-                @Override
-                public void onCancelled(@NonNull DatabaseError databaseError) {
-                    // Error handling
-                    Log.e("Detail 화면", "Firebase에서 즐겨찾기 정보를 업데이트하는 데 실패했습니다: " + databaseError.getMessage());
-                }
-            });
-        }
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
+                // Error handling
+                Log.e("Detail 화면", "Firebase에서 즐겨찾기 정보를 가져오는 데 실패했습니다: " + databaseError.getMessage());
+            }
+        });
     }
 
     @Override

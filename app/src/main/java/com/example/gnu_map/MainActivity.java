@@ -3,18 +3,16 @@ package com.example.gnu_map;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-import androidx.recyclerview.widget.LinearLayoutManager;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.provider.ContactsContract;
 import android.util.Log;
 import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.SearchView;
-
-//import com.google.android.gms.maps.MapView;
-//import com.google.android.gms.maps.model.LatLng;
-//import com.google.android.gms.maps.model.Marker;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -30,21 +28,24 @@ import com.google.firebase.database.ValueEventListener;
 
 
 import android.widget.RelativeLayout;
+import android.widget.Spinner;
 import android.widget.TextView;
 
 import net.daum.mf.map.api.MapPoint;
 import net.daum.mf.map.api.MapView;
 
 public class MainActivity extends AppCompatActivity {
-    //    private RecyclerView recyclerView;
-//    private RecyclerView.Adapter adapter;
-//    private RecyclerView.LayoutManager layoutManager;
-//    private ArrayList<Buildings> arrayList;
 
     //    //현재위치
 ////    private static final int LOCATION_PERMISSION_REQUEST_CODE = 100;
     private FirebaseDatabase database;
-    private DatabaseReference databaseReference;
+    //    private DatabaseReference databaseReference;
+    private DatabaseReference GajwaReference;
+    private DatabaseReference ChilamReference;
+    private DatabaseReference TongyeongReference;
+    private DatabaseReference ChangwonReference;
+    private DatabaseReference NaedongReference;
+
 
 
     private SearchView searchView;
@@ -52,15 +53,77 @@ public class MainActivity extends AppCompatActivity {
     RelativeLayout mapViewContainer1;
 
 
+    private Spinner campusSpinner;
+    private ArrayAdapter<CharSequence> campusAdapter;
 
     private RecyclerView bookmarkRecyclerView;
     private List<Bookmark> bookmarkList;
     private BookmarkAdapter adapter;
     private TextView noBookmarkView;
+
+    private String selectedCampus;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        database = FirebaseDatabase.getInstance();
+        GajwaReference = database.getReference("GajwaBuilding");
+        ChilamReference = database.getReference("ChilamBuilding");
+        TongyeongReference = database.getReference("TongyeongBuilding");
+        ChangwonReference = database.getReference("ChangwonBuilding");
+        NaedongReference = database.getReference("NaedongBuilding");
+
+        // Spinner 초기화
+        campusSpinner = findViewById(R.id.campus_spinner);
+
+        // 캠퍼스 목록 가져오기
+        CharSequence[] campuses = getResources().getTextArray(R.array.campus_array);
+
+        // ArrayAdapter 생성
+        campusAdapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_item, campuses);
+        campusAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+
+        campusSpinner.setAdapter(campusAdapter);
+
+        campusSpinner.setSelection(0); // "가좌캠퍼스"가 기본 선택
+
+        // Spinner 아이템 선택 리스너 설정
+        campusSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                // 선택된 항목의 위치(position) 또는 값(campuses[position])을 사용하여 원하는 작업 수행
+                selectedCampus = parent.getItemAtPosition(position).toString();
+
+                if (selectedCampus.equals("가좌캠퍼스")) {
+                    mapView1.setMapCenterPoint(MapPoint.mapPointWithGeoCoord(35.15412303, 128.0988896), true);
+                    mapView1.setZoomLevel(2, true); // 필요한 경우 지도 줌 레벨도 설정
+                    loadGajwaData();
+                }
+                else if (selectedCampus.equals("칠암캠퍼스")) {
+                    mapView1.setMapCenterPoint(MapPoint.mapPointWithGeoCoord(35.180721, 128.094039), true);
+                    mapView1.setZoomLevel(2, true); // 필요한 경우 지도 줌 레벨도 설정
+                    loadChilamData();
+                }
+                else if (selectedCampus.equals("통영캠퍼스")) {
+                    mapView1.setMapCenterPoint(MapPoint.mapPointWithGeoCoord(34.838687, 128.399653), true);
+                    mapView1.setZoomLevel(2, true); // 필요한 경우 지도 줌 레벨도 설정
+                }
+                else if (selectedCampus.equals("창원산학캠퍼스")) {
+                    mapView1.setMapCenterPoint(MapPoint.mapPointWithGeoCoord(35.240670, 128.631700), true);
+                    mapView1.setZoomLevel(2, true); // 필요한 경우 지도 줌 레벨도 설정
+                }
+                else if (selectedCampus.equals("내동캠퍼스")) {
+                    mapView1.setMapCenterPoint(MapPoint.mapPointWithGeoCoord(35.155678, 128.083143), true);
+                    mapView1.setZoomLevel(2, true); // 필요한 경우 지도 줌 레벨도 설정
+                }
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+                // 아무 것도 선택되지 않았을 때의 동작
+            }
+        });
 
         noBookmarkView = findViewById(R.id.no_bookmark_textview);
 
@@ -113,28 +176,59 @@ public class MainActivity extends AppCompatActivity {
 
         Button locationButton = findViewById(R.id.locationbutton);
 
-        // locationbutton 버튼 클릭 리스너 설정
         locationButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // 버튼이 클릭되었을 때 호출될 메서드 호출
-                setLocation();
+                String selectedCampus = campusSpinner.getSelectedItem().toString();
+                switch (selectedCampus) {
+                    case "가좌캠퍼스":
+                        mapView1.setMapCenterPoint(MapPoint.mapPointWithGeoCoord(35.15412303, 128.0988896), true);
+                        mapView1.setZoomLevel(2, true);
+                        break;
+                    case "칠암캠퍼스":
+                        mapView1.setMapCenterPoint(MapPoint.mapPointWithGeoCoord(35.180721, 128.094039), true);
+                        mapView1.setZoomLevel(2, true);
+                        break;
+                    case "통영캠퍼스":
+                        mapView1.setMapCenterPoint(MapPoint.mapPointWithGeoCoord(34.838687, 128.399653), true);
+                        mapView1.setZoomLevel(2, true);
+                        break;
+                    case "창원산학캠퍼스":
+                        mapView1.setMapCenterPoint(MapPoint.mapPointWithGeoCoord(35.240670, 128.631700), true);
+                        mapView1.setZoomLevel(2, true);
+                        break;
+                    case "내동캠퍼스":
+                        mapView1.setMapCenterPoint(MapPoint.mapPointWithGeoCoord(35.155678, 128.083143), true);
+                        mapView1.setZoomLevel(2, true);
+                        break;
+                    default:
+                        // 기본적으로 가좌캠퍼스로 설정
+                        mapView1.setMapCenterPoint(MapPoint.mapPointWithGeoCoord(35.15412303, 128.0988896), true);
+                        mapView1.setZoomLevel(2, true);
+                        break;
+                }
             }
         });
+
+
 
 
         bookmarkRef.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 bookmarkList.clear();
-                for (DataSnapshot snapshot : dataSnapshot.getChildren()) {
-                    String buildingImg = snapshot.child("building_img").getValue(String.class);
-                    String buildingNum = snapshot.child("building_num").getValue(String.class);
-                    String buildingName = snapshot.child("building_name").getValue(String.class);
+                for (DataSnapshot campusSnapshot : dataSnapshot.getChildren()) {
+                    for (DataSnapshot buildingSnapshot : campusSnapshot.getChildren()) {
+                        String buildingImg = buildingSnapshot.child("building_img").getValue(String.class);
+                        String buildingNum = buildingSnapshot.child("building_num").getValue(String.class);
+                        String buildingName = buildingSnapshot.child("building_name").getValue(String.class);
+                        String campus = buildingSnapshot.child("campus").getValue(String.class);
 
-                    Bookmark bookmark = new Bookmark(buildingImg, buildingNum, buildingName);
-                    bookmarkList.add(bookmark);
+                        Bookmark bookmark = new Bookmark(buildingImg, buildingNum, buildingName, campus);
+                        bookmarkList.add(bookmark);
+                    }
                 }
+
                 adapter.notifyDataSetChanged();
 
                 if (dataSnapshot.exists()) {
@@ -154,7 +248,38 @@ public class MainActivity extends AppCompatActivity {
                 // 데이터를 불러오지 못한 경우의 처리
             }
         });
+
     }
+
+    private void loadGajwaData() {
+        GajwaReference.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+                // 데이터 로드 후 처리
+            }
+
+            @Override
+            public void onCancelled(DatabaseError databaseError) {
+                // 데이터 로드 중 오류 발생 시 처리
+            }
+        });
+    }
+
+    // 칠암캠퍼스 데이터 로드
+    private void loadChilamData() {
+        ChilamReference.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+                // 데이터 로드 후 처리
+            }
+
+            @Override
+            public void onCancelled(DatabaseError databaseError) {
+                // 데이터 로드 중 오류 발생 시 처리
+            }
+        });
+    }
+
 
     // GNU버튼 지도 위치 리셋
     private void setLocation() {
@@ -165,9 +290,27 @@ public class MainActivity extends AppCompatActivity {
 
 
     private void searchBuilding(String searchText) {
-        DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReference("Buildingdata");
+//        DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReference("Buildingdata");
 
-        Query queryByName = databaseReference.orderByChild("building_name").startAt(searchText).endAt(searchText + "\uf8ff");
+        DatabaseReference selectedReference;
+        String selectedCampus = campusSpinner.getSelectedItem().toString();
+
+        // 현재 선택된 캠퍼스에 따라 데이터베이스 선택
+        if (selectedCampus.equals("가좌캠퍼스")) {
+            selectedReference = GajwaReference;
+        } else if (selectedCampus.equals("칠암캠퍼스")) {
+            selectedReference = ChilamReference;
+        } else if (selectedCampus.equals("통영캠퍼스")) {
+            selectedReference = TongyeongReference;
+        } else if (selectedCampus.equals("창원산학캠퍼스")) {
+            selectedReference = ChangwonReference;
+        } else if (selectedCampus.equals("내동캠퍼스")) {
+            selectedReference = NaedongReference;
+        } else {
+            selectedReference = GajwaReference;
+        }
+
+        Query queryByName = selectedReference.orderByChild("building_name").startAt(searchText).endAt(searchText + "\uf8ff");
 
         queryByName.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
@@ -179,7 +322,7 @@ public class MainActivity extends AppCompatActivity {
                 }
 
                 // 여기서 검색 결과에 building_num으로 숫자가 포함되는 결과 추가
-                databaseReference.orderByChild("building_num").addListenerForSingleValueEvent(new ValueEventListener() {
+                selectedReference.orderByChild("building_num").addListenerForSingleValueEvent(new ValueEventListener() {
                     @Override
                     public void onDataChange(DataSnapshot dataSnapshot) {
                         for (DataSnapshot snapshot : dataSnapshot.getChildren()) {
@@ -225,5 +368,7 @@ public class MainActivity extends AppCompatActivity {
         mapView1.setZoomLevel(2, true); // 맵의 줌 레벨 설정
     }
 
-
+    public String getSelectedCampus() {
+        return selectedCampus;
+    }
 }

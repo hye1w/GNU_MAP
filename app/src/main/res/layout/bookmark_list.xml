@@ -57,13 +57,14 @@
                     android:layout_marginTop="5dp"
                     android:text="건물번호"
                     android:textColor="@color/white"
-                    android:textSize="13dp"
+                    android:textSize="14dp"
                     android:textStyle="bold" />
 
                 <TextView
                     android:id="@+id/buildingname_text"
-                    android:layout_width="match_parent"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_margin="2dp"
                     android:layout_marginTop="5dp"
                     android:ellipsize="marquee"
                     android:gravity="center"
@@ -71,7 +72,7 @@
                     android:maxLines="2"
                     android:text="건물명"
                     android:textColor="@color/white"
-                    android:textSize="13dp"
+                    android:textSize="14dp"
                     android:textStyle="bold" />
             </LinearLayout>
 

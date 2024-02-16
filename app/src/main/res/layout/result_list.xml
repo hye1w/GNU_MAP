@@ -37,6 +37,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="35dp"
             android:layout_marginLeft="7dp"
+            android:layout_marginRight="12dp"
             android:orientation="vertical">
 
 
@@ -44,21 +45,24 @@
                 android:id="@+id/buildingnum_text"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_margin="5dp"
+                android:layout_marginLeft="5dp"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
                 android:text="건물번호"
                 android:textColor="@color/black"
-                android:textSize="16dp"
-                android:textStyle="bold" />
+                android:textSize="18dp"
+                android:textStyle="bold"/>
 
             <TextView
                 android:id="@+id/buildingname_text"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="5dp"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
                 android:text="건물명"
                 android:textColor="@color/black"
-                android:textSize="16dp"
-                android:textStyle="bold" />
+                android:textSize="16dp" />
         </LinearLayout>
 
     </LinearLayout>

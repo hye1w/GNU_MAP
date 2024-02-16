@@ -30,7 +30,7 @@
             android:outlineProvider="background"
             android:text="GNU MAP"
             android:textColor="@color/black"
-            android:textSize="25sp" />
+            android:textSize="24dp" />
 
 
         <androidx.cardview.widget.CardView
@@ -68,20 +68,20 @@
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
             android:textColor="@color/black"
-            android:padding="10dp"/>
+            android:padding="12dp" />
 
     </LinearLayout>
 
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="420dp"
+        android:layout_height="460dp"
         android:orientation="horizontal">
 
         <RelativeLayout
             android:id="@+id/main_map"
             android:layout_width="match_parent"
-            android:layout_height="400dp"
+            android:layout_height="440dp"
             android:layout_marginLeft="20dp"
             android:layout_marginRight="20dp">
 
@@ -107,7 +107,7 @@
             android:fontFamily="@font/nanumsquare_b"
             android:text="즐겨찾기"
             android:textColor="@color/black"
-            android:textSize="18sp" />
+            android:textSize="16dp" />
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/bookmark_recycler"

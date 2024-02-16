@@ -30,7 +30,7 @@
             android:layout_height="wrap_content"
             android:text="찾으시려는 건물을 \n선택 해주세요."
             android:fontFamily="@font/nanumsquare_extrab"
-            android:textSize="26sp"
+            android:textSize="21dp"
             android:layout_marginTop="30dp"
             android:layout_marginLeft="10dp"
             android:textColor="@color/black" />

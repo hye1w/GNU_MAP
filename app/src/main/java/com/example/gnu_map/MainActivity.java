@@ -1,5 +1,8 @@
 package com.example.gnu_map;
 
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -67,6 +70,17 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        FirebaseAuth mAuth = FirebaseAuth.getInstance();
+
+        // 현재 사용자 가져오기
+        FirebaseUser currentUser = mAuth.getCurrentUser();
+
+        String uid = currentUser.getUid();
+
+        // Firebase 데이터베이스 초기화
+        database = FirebaseDatabase.getInstance();
+        DatabaseReference bookmarkRef = database.getReference("Bookmark").child(uid);
+
         database = FirebaseDatabase.getInstance();
         GajwaReference = database.getReference("GajwaBuilding");
         ChilamReference = database.getReference("ChilamBuilding");
@@ -98,12 +112,10 @@ public class MainActivity extends AppCompatActivity {
                 if (selectedCampus.equals("가좌캠퍼스")) {
                     mapView1.setMapCenterPoint(MapPoint.mapPointWithGeoCoord(35.15412303, 128.0988896), true);
                     mapView1.setZoomLevel(2, true); // 필요한 경우 지도 줌 레벨도 설정
-                    loadGajwaData();
                 }
                 else if (selectedCampus.equals("칠암캠퍼스")) {
                     mapView1.setMapCenterPoint(MapPoint.mapPointWithGeoCoord(35.180721, 128.094039), true);
                     mapView1.setZoomLevel(2, true); // 필요한 경우 지도 줌 레벨도 설정
-                    loadChilamData();
                 }
                 else if (selectedCampus.equals("통영캠퍼스")) {
                     mapView1.setMapCenterPoint(MapPoint.mapPointWithGeoCoord(34.838687, 128.399653), true);
@@ -170,9 +182,6 @@ public class MainActivity extends AppCompatActivity {
         bookmarkList = new ArrayList<>();
         adapter = new BookmarkAdapter(bookmarkList);
         bookmarkRecyclerView.setAdapter(adapter);
-
-        FirebaseDatabase database = FirebaseDatabase.getInstance();
-        DatabaseReference bookmarkRef = database.getReference("Bookmark");
 
         Button locationButton = findViewById(R.id.locationbutton);
 
@@ -249,35 +258,6 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-    }
-
-    private void loadGajwaData() {
-        GajwaReference.addValueEventListener(new ValueEventListener() {
-            @Override
-            public void onDataChange(DataSnapshot dataSnapshot) {
-                // 데이터 로드 후 처리
-            }
-
-            @Override
-            public void onCancelled(DatabaseError databaseError) {
-                // 데이터 로드 중 오류 발생 시 처리
-            }
-        });
-    }
-
-    // 칠암캠퍼스 데이터 로드
-    private void loadChilamData() {
-        ChilamReference.addValueEventListener(new ValueEventListener() {
-            @Override
-            public void onDataChange(DataSnapshot dataSnapshot) {
-                // 데이터 로드 후 처리
-            }
-
-            @Override
-            public void onCancelled(DatabaseError databaseError) {
-                // 데이터 로드 중 오류 발생 시 처리
-            }
-        });
     }
 
 

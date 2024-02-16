@@ -77,9 +77,6 @@ public class BookmarkAdapter extends RecyclerView.Adapter<BookmarkAdapter.ViewHo
             }
         }
 
-
-
-
         @Override
         public void onClick(View view) {
             int position = getAdapterPosition();

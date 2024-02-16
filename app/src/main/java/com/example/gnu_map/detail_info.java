@@ -19,6 +19,8 @@ import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 
 import com.google.android.gms.maps.model.LatLng;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -198,42 +200,45 @@ public class detail_info extends AppCompatActivity {
 
 
     private void toggleBookmark() {
-        DatabaseReference newBookmarkRef = databaseReference.child(campus).child(buildingNum);
-        if (isBookmarked) {
-            // 즐겨찾기 삭제
-            newBookmarkRef.removeValue();
-            bookmarkButton.setImageResource(R.drawable.heart_empty);
-            isBookmarked = false;
+        FirebaseAuth mAuth = FirebaseAuth.getInstance();
+        FirebaseUser currentUser = mAuth.getCurrentUser();
+        if (currentUser != null) {
+            String uid = currentUser.getUid();
+            DatabaseReference newBookmarkRef = databaseReference.child(uid).child(campus).child(buildingNum);
+
+            newBookmarkRef.addListenerForSingleValueEvent(new ValueEventListener() {
+                @Override
+                public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                    if (dataSnapshot.exists()) {
+                        // 즐겨찾기가 이미 존재하면 삭제
+                        newBookmarkRef.removeValue();
+                        bookmarkButton.setImageResource(R.drawable.heart_empty);
+                        isBookmarked = false;
+                    } else {
+                        // 즐겨찾기 추가
+                        newBookmarkRef.child("building_name").setValue(buildingName);
+                        newBookmarkRef.child("building_num").setValue(buildingNum);
+                        newBookmarkRef.child("building_img").setValue(buildingImg);
+                        newBookmarkRef.child("building_x").setValue(buildingX);
+                        newBookmarkRef.child("building_y").setValue(buildingY);
+                        newBookmarkRef.child("campus").setValue(campus);
+                        newBookmarkRef.child("uid").setValue(uid);
+                        bookmarkButton.setImageResource(R.drawable.heart_full);
+                        isBookmarked = true;
+                    }
+                }
+
+                @Override
+                public void onCancelled(@NonNull DatabaseError databaseError) {
+                    // 에러 처리
+                }
+            });
         } else {
-            newBookmarkRef.child("building_name").setValue(buildingName);
-            newBookmarkRef.child("building_num").setValue(buildingNum);
-            newBookmarkRef.child("building_img").setValue(buildingImg);
-            newBookmarkRef.child("building_x").setValue(buildingX);
-            newBookmarkRef.child("building_y").setValue(buildingY);
-            newBookmarkRef.child("campus").setValue(campus);
-            bookmarkButton.setImageResource(R.drawable.heart_full);
-            isBookmarked = true;
+            // 사용자가 로그인되어 있지 않은 경우에 대한 처리
+            // 여기에 처리를 추가하세요
         }
     }
 
-
-
-
-
-
-
-
-    // 로컬에 즐겨찾기 정보 저장
-    private void saveBookmark(Buildings building) {
-        // 로컬에 즐겨찾기 정보 저장
-        // SharedPreferences 또는 SQLite 등을 활용하여 구현
-    }
-
-    // 로컬에서 즐겨찾기 정보 삭제
-    private void removeBookmark(Buildings building) {
-        // 로컬에서 즐겨찾기 정보 삭제
-        // SharedPreferences 또는 SQLite 등을 활용하여 구현
-    }
 
 
     @Override

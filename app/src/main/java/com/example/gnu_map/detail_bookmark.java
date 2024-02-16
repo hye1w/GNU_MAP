@@ -11,6 +11,8 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -34,7 +36,6 @@ public class detail_bookmark extends AppCompatActivity {
     private double longitude;
     private double latitude;
     private String b_campus;
-    // Remove b_isBookmarked variable and its getter method
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -68,10 +69,20 @@ public class detail_bookmark extends AppCompatActivity {
             b_buildingNum = intent.getStringExtra("selected_building_num");
             b_campus = intent.getStringExtra("selected_campus");
 
+            FirebaseAuth mAuth = FirebaseAuth.getInstance();
+
+            // 현재 사용자 가져오기
+            FirebaseUser currentUser = mAuth.getCurrentUser();
+
+            String uid = currentUser.getUid();
+
+            // Firebase 데이터베이스 초기화
+            database = FirebaseDatabase.getInstance();
+
             // Check if the building number is not null
             if (b_buildingNum != null) {
                 // Retrieve building information from Bookmark database
-                bookmarkReference.child(b_campus).child(b_buildingNum).addListenerForSingleValueEvent(new ValueEventListener() {
+                bookmarkReference.child(uid).child(b_campus).child(b_buildingNum).addListenerForSingleValueEvent(new ValueEventListener() {
                     @Override
                     public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                         if (dataSnapshot.exists()) {
@@ -139,8 +150,12 @@ public class detail_bookmark extends AppCompatActivity {
 
     // Toggle bookmark status
     private void toggleBookmark() {
-        DatabaseReference newBookmarkRef = bookmarkReference.child(b_campus).child(b_buildingNum);
-        // Check if the building is bookmarked
+        FirebaseAuth mAuth = FirebaseAuth.getInstance();
+        FirebaseUser currentUser = mAuth.getCurrentUser();
+
+        String uid = currentUser.getUid();
+
+        DatabaseReference newBookmarkRef = bookmarkReference.child(uid).child(b_campus).child(b_buildingNum);
         newBookmarkRef.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
@@ -148,6 +163,7 @@ public class detail_bookmark extends AppCompatActivity {
                     // Bookmark exists, remove it
                     newBookmarkRef.removeValue();
                     b_bookmarkButton.setImageResource(R.drawable.heart_empty);
+
                 } else {
                     // Bookmark doesn't exist, add it
                     newBookmarkRef.child("building_name").setValue(b_buildingNameTextView.getText().toString());
@@ -156,6 +172,7 @@ public class detail_bookmark extends AppCompatActivity {
                     newBookmarkRef.child("building_x").setValue(latitude);
                     newBookmarkRef.child("building_y").setValue(longitude);
                     newBookmarkRef.child("campus").setValue(b_campus);
+                    newBookmarkRef.child("uid").setValue(uid);
                     b_bookmarkButton.setImageResource(R.drawable.heart_full);
                 }
             }

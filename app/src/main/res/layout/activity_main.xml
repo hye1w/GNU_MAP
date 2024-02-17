@@ -130,23 +130,5 @@
             android:layout_marginTop="10dp"
             android:layout_marginLeft="5dp"/>
 
-
     </LinearLayout>
-
-    <!--    <LinearLayout-->
-    <!--        android:layout_width="wrap_content"-->
-    <!--        android:layout_height="300dp"  >-->
-
-    <!--        <androidx.recyclerview.widget.RecyclerView-->
-    <!--            android:id="@+id/recyclerView"-->
-    <!--            android:layout_width="match_parent"-->
-    <!--            android:layout_height="match_parent"-->
-    <!--            android:divider="@android:color/darker_gray"-->
-    <!--            android:dividerHeight="1dp"-->
-    <!--            android:padding="16dp" />-->
-
-
-    <!--    </LinearLayout>-->
-
-
 </LinearLayout>

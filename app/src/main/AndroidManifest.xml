@@ -12,7 +12,7 @@
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
         android:icon="@mipmap/ic_launcher"
-        android:label="@string/app_name"
+        android:label = "GNU MAP"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.GNU_map"
@@ -30,7 +30,7 @@
         <activity android:name=".search_result"/>
         <activity android:name=".detail_info"/>
         <activity android:name=".detail_bookmark"/>
-
+z
         <meta-data
             android:name="com.kakao.sdk.AppKey"
             android:value="5ac280831afd6f5452e672cf46a6534e" />

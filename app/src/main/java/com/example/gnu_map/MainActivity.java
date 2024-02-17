@@ -9,7 +9,6 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.provider.ContactsContract;
 import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
@@ -38,23 +37,16 @@ import net.daum.mf.map.api.MapPoint;
 import net.daum.mf.map.api.MapView;
 
 public class MainActivity extends AppCompatActivity {
-
-    //    //현재위치
-////    private static final int LOCATION_PERMISSION_REQUEST_CODE = 100;
     private FirebaseDatabase database;
-    //    private DatabaseReference databaseReference;
     private DatabaseReference GajwaReference;
     private DatabaseReference ChilamReference;
     private DatabaseReference TongyeongReference;
     private DatabaseReference ChangwonReference;
     private DatabaseReference NaedongReference;
 
-
-
     private SearchView searchView;
     private MapView mapView1;
     RelativeLayout mapViewContainer1;
-
 
     private Spinner campusSpinner;
     private ArrayAdapter<CharSequence> campusAdapter;
@@ -63,21 +55,19 @@ public class MainActivity extends AppCompatActivity {
     private List<Bookmark> bookmarkList;
     private BookmarkAdapter adapter;
     private TextView noBookmarkView;
-
     private String selectedCampus;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
         FirebaseAuth mAuth = FirebaseAuth.getInstance();
-
         // 현재 사용자 가져오기
         FirebaseUser currentUser = mAuth.getCurrentUser();
 
         String uid = currentUser.getUid();
 
-        // Firebase 데이터베이스 초기화
         database = FirebaseDatabase.getInstance();
         DatabaseReference bookmarkRef = database.getReference("Bookmark").child(uid);
 
@@ -106,28 +96,27 @@ public class MainActivity extends AppCompatActivity {
         campusSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                // 선택된 항목의 위치(position) 또는 값(campuses[position])을 사용하여 원하는 작업 수행
                 selectedCampus = parent.getItemAtPosition(position).toString();
 
                 if (selectedCampus.equals("가좌캠퍼스")) {
                     mapView1.setMapCenterPoint(MapPoint.mapPointWithGeoCoord(35.15412303, 128.0988896), true);
-                    mapView1.setZoomLevel(2, true); // 필요한 경우 지도 줌 레벨도 설정
+                    mapView1.setZoomLevel(2, true);
                 }
                 else if (selectedCampus.equals("칠암캠퍼스")) {
                     mapView1.setMapCenterPoint(MapPoint.mapPointWithGeoCoord(35.180721, 128.094039), true);
-                    mapView1.setZoomLevel(2, true); // 필요한 경우 지도 줌 레벨도 설정
+                    mapView1.setZoomLevel(2, true);
                 }
                 else if (selectedCampus.equals("통영캠퍼스")) {
                     mapView1.setMapCenterPoint(MapPoint.mapPointWithGeoCoord(34.838687, 128.399653), true);
-                    mapView1.setZoomLevel(2, true); // 필요한 경우 지도 줌 레벨도 설정
+                    mapView1.setZoomLevel(2, true);
                 }
                 else if (selectedCampus.equals("창원산학캠퍼스")) {
                     mapView1.setMapCenterPoint(MapPoint.mapPointWithGeoCoord(35.240670, 128.631700), true);
-                    mapView1.setZoomLevel(2, true); // 필요한 경우 지도 줌 레벨도 설정
+                    mapView1.setZoomLevel(2, true);
                 }
                 else if (selectedCampus.equals("내동캠퍼스")) {
                     mapView1.setMapCenterPoint(MapPoint.mapPointWithGeoCoord(35.155678, 128.083143), true);
-                    mapView1.setZoomLevel(2, true); // 필요한 경우 지도 줌 레벨도 설정
+                    mapView1.setZoomLevel(2, true);
                 }
             }
 
@@ -157,7 +146,6 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-
         //지도
         mapView1 = new MapView(this);
 
@@ -174,7 +162,6 @@ public class MainActivity extends AppCompatActivity {
 
         bookmarkRecyclerView = findViewById(R.id.bookmark_recycler);
         GridLayoutManager layoutManager = new GridLayoutManager(this, 1, GridLayoutManager.HORIZONTAL, false);
-
 
         bookmarkRecyclerView.setLayoutManager(layoutManager);
         bookmarkRecyclerView.setHasFixedSize(true);
@@ -219,9 +206,6 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-
-
-
         bookmarkRef.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
@@ -260,7 +244,6 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-
     // GNU버튼 지도 위치 리셋
     private void setLocation() {
         // 지도의 중심을 변경
@@ -270,7 +253,6 @@ public class MainActivity extends AppCompatActivity {
 
 
     private void searchBuilding(String searchText) {
-//        DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReference("Buildingdata");
 
         DatabaseReference selectedReference;
         String selectedCampus = campusSpinner.getSelectedItem().toString();

@@ -37,8 +37,6 @@ public class BuildingAdapter extends RecyclerView.Adapter<BuildingAdapter.Buildi
                 .into(holder.building_img);
         holder.buildingNameTextView.setText(building.getBuildingName());
         holder.buildingNumTextView.setText(String.valueOf(building.getBuildingNum() + "동"));
-
-
     }
 
     @Override

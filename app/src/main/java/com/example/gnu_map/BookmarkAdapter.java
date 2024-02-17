@@ -16,7 +16,6 @@ import com.bumptech.glide.Glide;
 import java.util.List;
 
 public class BookmarkAdapter extends RecyclerView.Adapter<BookmarkAdapter.ViewHolder> {
-
     private List<Bookmark> bookmarkList;
 
     BookmarkAdapter(List<Bookmark> bookmarkList) {
@@ -54,7 +53,6 @@ public class BookmarkAdapter extends RecyclerView.Adapter<BookmarkAdapter.ViewHo
             this.buildingNumTextView = itemView.findViewById(R.id.buildingnum_text);
             this.campusTextView = itemView.findViewById(R.id.campus_text);
 
-            // 클릭 리스너 설정
             itemView.setOnClickListener(this);
         }
 
@@ -67,7 +65,6 @@ public class BookmarkAdapter extends RecyclerView.Adapter<BookmarkAdapter.ViewHo
                 buildingNumTextView.setText(String.valueOf(bookmark.getBuildingNum() + "동"));
                 campusTextView.setText(bookmark.getCampus());
             } else {
-                // If buildingNum is "1000", hide the views
                 Glide.with(itemView)
                         .load(bookmark.getBuildingImg())
                         .into(building_img);
@@ -85,10 +82,6 @@ public class BookmarkAdapter extends RecyclerView.Adapter<BookmarkAdapter.ViewHo
                 String selectedBuildingName = bookmarkList.get(position).getBuildingName();
                 String selectedBuildingNum = bookmarkList.get(position).getBuildingNum();
                 String selectedCampus = bookmarkList.get(position).getCampus();
-                // Logcat에 출력
-                Log.d("SelectedBuildingName", "선택된 건물명: " + selectedBuildingName);
-                Log.d("SelectedBuildingNum", "선택된 건물번호: " + selectedBuildingNum);
-                Log.d("SelectedCampus", "선택된 캠퍼스: " + selectedCampus);
 
                 // Intent를 통해 detail_bookmark 화면으로 건물 번호 전달
                 Intent intent = new Intent(view.getContext(), detail_bookmark.class);

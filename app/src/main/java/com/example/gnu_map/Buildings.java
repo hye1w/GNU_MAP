@@ -33,7 +33,6 @@ public class Buildings implements Parcelable {
         campus = in.readString();
     }
 
-
     public static final Creator<Buildings> CREATOR = new Creator<Buildings>() {
         @Override
         public Buildings createFromParcel(Parcel in) {

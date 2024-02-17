@@ -57,27 +57,12 @@ public class BuildingRepository {
                 }
             }
 
-//            // Room Database에 데이터 추가
-//            if (!buildingList.isEmpty()) {
-//                database.runInTransaction(new Runnable() {
-//                    @Override
-//                    public void run() {
-//                        buildingDao.insertAll(buildingList);
-//                        Log.d("BuildingRepository", "Data inserted into Room Database.");
-//                    }
-//                });
-//            }
-
-
         buildingDao.insertAll(buildingList);
 
         } catch (IOException e) {
             e.printStackTrace();
         } finally {
-            // Close the database explicitly after use
             database.close();
         }
-
-
     }
 }

@@ -8,14 +8,12 @@ import androidx.room.PrimaryKey;
 
 @Entity
 public class Building implements Parcelable{
-
     @PrimaryKey
     public int id;  //하나의 사용자에 대한 고유 ID값
     public String building_name;
     public String building_num;
     public Double building_x;
     public Double building_y;
-
     private String building_img;
 
     public Building(int id, String building_name, String building_num, Double building_x, Double building_y, String building_img) {
@@ -68,7 +66,6 @@ public class Building implements Parcelable{
     public void setBuildingY(Double building_y) { this.building_y = building_y; }
 
     public void setBuilding_img(String building_img) { this.building_img = building_img; }
-
 
     @Override
     public String toString() {

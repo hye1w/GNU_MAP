@@ -1,7 +1,6 @@
 package com.example.gnu_map;
 
 import android.util.Log;
-import android.widget.Button;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -13,7 +12,6 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
-import java.util.List;
 
 public class search_result extends AppCompatActivity {
     private RecyclerView recyclerView;
@@ -35,10 +33,7 @@ public class search_result extends AppCompatActivity {
         {
             @Override
             public void onClick(View view) {
-                // MainActivity로 이동하는 Intent 생성
                 Intent intent = new Intent(search_result.this, MainActivity.class);
-
-                // Intent를 사용하여 MainActivity로 이동
                 startActivity(intent);
             }
         });
@@ -61,9 +56,6 @@ public class search_result extends AppCompatActivity {
                 Log.d("INFO_TAG", "검색된 정보 없음: " + adapter.getItemCount());
             }
         }
-
-//        CustomAdapter adapter = new CustomAdapter(searchResultsList, this);
-//        recyclerView.setAdapter(adapter);
 
         adapter.setOnItemClickListener(new CustomAdapter.OnItemClickListener() {
             @Override

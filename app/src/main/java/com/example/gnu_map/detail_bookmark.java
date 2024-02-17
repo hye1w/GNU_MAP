@@ -42,11 +42,9 @@ public class detail_bookmark extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.detail_bookmark);
 
-        // Initialize Firebase database references
         database = FirebaseDatabase.getInstance();
         bookmarkReference = database.getReference("Bookmark");
 
-        // Initialize UI components
         b_buildingNameTextView = findViewById(R.id.b_detail_buildingname);
         b_mapView1 = new MapView(this);
         b_mapViewContainer = findViewById(R.id.b_detail_map);
@@ -76,12 +74,9 @@ public class detail_bookmark extends AppCompatActivity {
 
             String uid = currentUser.getUid();
 
-            // Firebase 데이터베이스 초기화
             database = FirebaseDatabase.getInstance();
 
-            // Check if the building number is not null
             if (b_buildingNum != null) {
-                // Retrieve building information from Bookmark database
                 bookmarkReference.child(uid).child(b_campus).child(b_buildingNum).addListenerForSingleValueEvent(new ValueEventListener() {
                     @Override
                     public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
@@ -95,10 +90,9 @@ public class detail_bookmark extends AppCompatActivity {
 
                             Log.d("detailBuildingName", "detail 건물번호: " + buildingNum);
                             Log.d("detailBuildinglocation", "detail 건물 위치: " + latitude + "," + longitude);
-                            // Display building name on UI
+
                             b_buildingNameTextView.setText(buildingName);
 
-                            // Center map on building location
                             b_mapView1.setMapCenterPoint(MapPoint.mapPointWithGeoCoord(latitude, longitude), true);
                             b_mapView1.setZoomLevel(1, true);
 
@@ -127,8 +121,6 @@ public class detail_bookmark extends AppCompatActivity {
                     }
                 });
 
-
-
             } else {
                 // Building number is null
                 Log.e("Detail 화면", "전달된 건물 번호가 null입니다.");
@@ -137,7 +129,6 @@ public class detail_bookmark extends AppCompatActivity {
             // Intent is null
             Log.e("Detail 화면", "전달된 Intent가 null입니다.");
         }
-
         // Bookmark button click listener
         b_bookmarkButton.setOnClickListener(new View.OnClickListener() {
             @Override

@@ -1,0 +1,18 @@
+[
+  {
+    "campus": "내동캠",
+    "building_num": 1000,
+    "building_name": "종합농장",
+    "building_x": 35.15639546,
+    "building_y": 128.0827464,
+    "building_img": "https://firebasestorage.googleapis.com/v0/b/gmap-f88d5.appspot.com/o/naedong.png?alt=media&token=c1051bcb-2758-4322-9083-6cc8d56ba2b8"
+  },
+  {
+    "campus": "내동캠",
+    "building_num": 18,
+    "building_name": "울림관",
+    "building_x": 35.1558542,
+    "building_y": 128.0833044,
+    "building_img": "https://firebasestorage.googleapis.com/v0/b/gmap-f88d5.appspot.com/o/naedong_18.jpg?alt=media&token=29641843-f32a-49a7-a3c7-2e2f28f1cbe8"
+  }
+]

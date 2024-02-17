@@ -1,0 +1,610 @@
+[
+  {
+    "campus": "가좌캠",
+    "building_num": 1,
+    "building_name": "대학본부",
+    "building_x": 35.15387685,
+    "building_y": 128.101682,
+    "building_img": "https://firebasestorage.googleapis.com/v0/b/gmap-f88d5.appspot.com/o/building1.jpg?alt=media&token=aff3a228-a5b7-46ef-a1ef-f742c086d60d"
+  },
+  {
+    "campus": "가좌캠",
+    "building_num": 2,
+    "building_name": "중앙도서관",
+    "building_x": 35.1531692,
+    "building_y": 128.0997114,
+    "building_img": "https://firebasestorage.googleapis.com/v0/b/gmap-f88d5.appspot.com/o/building2.jpg?alt=media&token=42702312-a493-4d32-8fd7-0c6704f68389"
+  },
+  {
+    "campus": "가좌캠",
+    "building_num": 3,
+    "building_name": "학생회관",
+    "building_x": 35.15356873,
+    "building_y": 128.0973979,
+    "building_img": "https://firebasestorage.googleapis.com/v0/b/gmap-f88d5.appspot.com/o/building3.jpg?alt=media&token=c382c9d7-19a1-4214-ba6d-6f899165a6be"
+  },
+  {
+    "campus": "가좌캠",
+    "building_num": 4,
+    "building_name": "학술정보관",
+    "building_x": 35.15357134,
+    "building_y": 128.096114,
+    "building_img": "https://firebasestorage.googleapis.com/v0/b/gmap-f88d5.appspot.com/o/building354.jpg?alt=media&token=c0899b5d-be6d-4d4b-b3e4-6e8792ff0ebd"
+  },
+  {
+    "campus": "가좌캠",
+    "building_num": 5,
+    "building_name": "체육관",
+    "building_x": 35.15534758,
+    "building_y": 128.1029913,
+    "building_img": "https://firebasestorage.googleapis.com/v0/b/gmap-f88d5.appspot.com/o/building5.jpg?alt=media&token=54ada238-6596-4b8f-9c39-815ba2edf988"
+  },
+  {
+    "campus": "가좌캠",
+    "building_num": 6,
+    "building_name": "개방형 스포츠 콤플렉스",
+    "building_x": 35.15510413,
+    "building_y": 128.1059676,
+    "building_img": "https://firebasestorage.googleapis.com/v0/b/gmap-f88d5.appspot.com/o/building6.jpg?alt=media&token=cb45e167-1848-45c3-838a-a094195bf4f9"
+  },
+  {
+    "campus": "가좌캠",
+    "building_num": 7,
+    "building_name": "GNU컨벤션센터·입학본부·인재개발원",
+    "building_x": 35.15453405,
+    "building_y": 128.1020119,
+    "building_img": "https://firebasestorage.googleapis.com/v0/b/gmap-f88d5.appspot.com/o/building7.jpg?alt=media&token=c411b92d-6b80-464d-b8cc-02dea1a1fbbc"
+  },
+  {
+    "campus": "가좌캠",
+    "building_num": 11,
+    "building_name": "박물관 및 고문헌도서관",
+    "building_x": 35.15547583,
+    "building_y": 128.1022687,
+    "building_img": "https://firebasestorage.googleapis.com/v0/b/gmap-f88d5.appspot.com/o/building11.jpg?alt=media&token=8022f230-7509-423d-b8a3-69964f35e528"
+  },
+  {
+    "campus": "가좌캠",
+    "building_num": 21,
+    "building_name": "GNU어린이집",
+    "building_x": 35.15624057,
+    "building_y": 128.1034094,
+    "building_img": "https://firebasestorage.googleapis.com/v0/b/gmap-f88d5.appspot.com/o/building21.jpg?alt=media&token=febe8256-44cd-46d7-bc78-84fbb0fc6faf"
+  },
+  {
+    "campus": "가좌캠",
+    "building_num": 21,
+    "building_name": "정문",
+    "building_x": 35.15249517,
+    "building_y": 128.1042039,
+    "building_img": "https://firebasestorage.googleapis.com/v0/b/gmap-f88d5.appspot.com/o/%EC%A0%95%EB%AC%B8.jpg?alt=media&token=bc7a5387-c889-4820-aecc-38cf8ad7e6dd"
+  },
+  {
+    "campus": "가좌캠",
+    "building_num": 22,
+    "building_name": "남문",
+    "building_x": 35.14981663,
+    "building_y": 128.0994325,
+    "building_img": "https://firebasestorage.googleapis.com/v0/b/gmap-f88d5.appspot.com/o/%EB%82%A8%EB%AC%B8.jpg?alt=media&token=e8f2c231-6270-4d65-b5e1-30bfd983b522"
+  },
+  {
+    "campus": "가좌캠",
+    "building_num": 23,
+    "building_name": "북문",
+    "building_x": 35.15594639,
+    "building_y": 128.1042889,
+    "building_img": "https://firebasestorage.googleapis.com/v0/b/gmap-f88d5.appspot.com/o/%EB%B6%81%EB%AC%B8.jpg?alt=media&token=4a36b308-f51f-4580-bdf9-978718658a6a"
+  },
+  {
+    "campus": "가좌캠",
+    "building_num": 24,
+    "building_name": "교양학관·교육혁신처",
+    "building_x": 35.15188575,
+    "building_y": 128.0991147,
+    "building_img": "https://firebasestorage.googleapis.com/v0/b/gmap-f88d5.appspot.com/o/building24.jpg?alt=media&token=0eb5c977-5cde-4b7b-b3a9-ddaba52bd649"
+  },
+  {
+    "campus": "가좌캠",
+    "building_num": 25,
+    "building_name": "창업보육센터",
+    "building_x": 35.15094697,
+    "building_y": 128.1005122,
+    "building_img": "https://firebasestorage.googleapis.com/v0/b/gmap-f88d5.appspot.com/o/building25.jpg?alt=media&token=943b2662-a7ba-422c-9f47-97350ac1b053"
+  },
+  {
+    "campus": "가좌캠",
+    "building_num": 27,
+    "building_name": "공동실험실습관",
+    "building_x": 35.15316483,
+    "building_y": 128.0947203,
+    "building_img": "https://firebasestorage.googleapis.com/v0/b/gmap-f88d5.appspot.com/o/building27.jpg?alt=media&token=94989b7c-6036-4f1d-a30d-4936ad4aa166"
+  },
+  {
+    "campus": "가좌캠",
+    "building_num": 28,
+    "building_name": "BNIT R&D 산학협력센터",
+    "building_x": 35.15367202,
+    "building_y": 128.0954459,
+    "building_img": "https://firebasestorage.googleapis.com/v0/b/gmap-f88d5.appspot.com/o/building28.jpg?alt=media&token=d745aacb-1015-451f-b84a-bfef52bc03b3"
+  },
+  {
+    "campus": "가좌캠",
+    "building_num": 29,
+    "building_name": "국제어학원",
+    "building_x": 35.15412303,
+    "building_y": 128.0988896,
+    "building_img": "https://firebasestorage.googleapis.com/v0/b/gmap-f88d5.appspot.com/o/building29.jpg?alt=media&token=67fdf0bd-d76c-467f-8438-85d7e789ae4f"
+  },
+  {
+    "campus": "가좌캠",
+    "building_num": 30,
+    "building_name": "컴퓨터과학관",
+    "building_x": 35.15444805,
+    "building_y": 128.0983316,
+    "building_img": "https://firebasestorage.googleapis.com/v0/b/gmap-f88d5.appspot.com/o/building30.jpg?alt=media&token=74847b67-d4a0-484c-b2fd-e915c4680c54"
+  },
+  {
+    "campus": "가좌캠",
+    "building_num": 31,
+    "building_name": "남명학관",
+    "building_x": 35.1562516,
+    "building_y": 128.0999663,
+    "building_img": "https://firebasestorage.googleapis.com/v0/b/gmap-f88d5.appspot.com/o/building31.jpg?alt=media&token=45d531d9-cabc-4053-a537-1f585ded82b5"
+  },
+  {
+    "campus": "가좌캠",
+    "building_num": 32,
+    "building_name": "126학생군사교육단",
+    "building_x": 35.15748189,
+    "building_y": 128.0924954,
+    "building_img": "https://firebasestorage.googleapis.com/v0/b/gmap-f88d5.appspot.com/o/building32.jpg?alt=media&token=0f0f2996-347b-4a56-96bd-bf95140fa619"
+  },
+  {
+    "campus": "가좌캠",
+    "building_num": 34,
+    "building_name": "예절교육관",
+    "building_x": 35.15353243,
+    "building_y": 128.1033784,
+    "building_img": "https://firebasestorage.googleapis.com/v0/b/gmap-f88d5.appspot.com/o/building34.jpg?alt=media&token=9408ca6a-4fdd-4381-8bb4-dc5fbe41928f"
+  },
+  {
+    "campus": "가좌캠",
+    "building_num": 41,
+    "building_name": "정보나눔터",
+    "building_x": 35.15274788,
+    "building_y": 128.1039192,
+    "building_img": "https://firebasestorage.googleapis.com/v0/b/gmap-f88d5.appspot.com/o/building41.jpg?alt=media&token=94a0c0da-e022-4465-ab56-44a0e4168cd0"
+  },
+  {
+    "campus": "가좌캠",
+    "building_num": 42,
+    "building_name": "야외공연장",
+    "building_x": 35.15202242,
+    "building_y": 128.102919,
+    "building_img": "https://firebasestorage.googleapis.com/v0/b/gmap-f88d5.appspot.com/o/building42.jpg?alt=media&token=425313be-150d-403a-b1e5-ba525cbaf126"
+  },
+  {
+    "campus": "가좌캠",
+    "building_num": 43,
+    "building_name": "대운동장",
+    "building_x": 35.15469008,
+    "building_y": 128.1044256,
+    "building_img": "https://firebasestorage.googleapis.com/v0/b/gmap-f88d5.appspot.com/o/building43.jpg?alt=media&token=67423c4c-fb4b-45b4-9a02-14e167b3f0b6"
+  },
+  {
+    "campus": "가좌캠",
+    "building_num": 44,
+    "building_name": "파워플랜트",
+    "building_x": 35.15068984,
+    "building_y": 128.099052,
+    "building_img": "https://firebasestorage.googleapis.com/v0/b/gmap-f88d5.appspot.com/o/building44.jpg?alt=media&token=5d40b828-eceb-4cce-a934-ee3d3d6072f7"
+  },
+  {
+    "campus": "가좌캠",
+    "building_num": 49,
+    "building_name": "교직원테니스장",
+    "building_x": 35.15655822,
+    "building_y": 128.1026729,
+    "building_img": "https://firebasestorage.googleapis.com/v0/b/gmap-f88d5.appspot.com/o/building49.jpg?alt=media&token=e40e0ac2-da19-4621-8cb8-d175084e2c7f"
+  },
+  {
+    "campus": "가좌캠",
+    "building_num": 58,
+    "building_name": "목공실",
+    "building_x": 35.15065222,
+    "building_y": 128.0992243,
+    "building_img": "https://firebasestorage.googleapis.com/v0/b/gmap-f88d5.appspot.com/o/building58.jpg?alt=media&token=83a29738-22a1-4589-a9b3-88f1e2ee1893"
+  },
+  {
+    "campus": "가좌캠",
+    "building_num": 61,
+    "building_name": "학생생활관 - 관리동",
+    "building_x": 35.1583647,
+    "building_y": 128.0995201,
+    "building_img": "https://firebasestorage.googleapis.com/v0/b/gmap-f88d5.appspot.com/o/building61.jpg?alt=media&token=78590bcb-1189-4507-b863-46def27a8d2f"
+  },
+  {
+    "campus": "가좌캠",
+    "building_num": 62,
+    "building_name": "학생생활관 - 제3BTL생활관(1동)",
+    "building_x": 35.15747065,
+    "building_y": 128.1002105,
+    "building_img": "https://firebasestorage.googleapis.com/v0/b/gmap-f88d5.appspot.com/o/building62.jpg?alt=media&token=7586caa0-ee19-43ac-9bf1-aaee01987009"
+  },
+  {
+    "campus": "가좌캠",
+    "building_num": 63,
+    "building_name": "학생생활관 - 제3BTL생활관(2동)",
+    "building_x": 35.15765493,
+    "building_y": 128.1000154,
+    "building_img": "https://firebasestorage.googleapis.com/v0/b/gmap-f88d5.appspot.com/o/building63.jpg?alt=media&token=2496a22b-68c5-40d0-828e-07603a313e32"
+  },
+  {
+    "campus": "가좌캠",
+    "building_num": 64,
+    "building_name": "학생생활관 - 제3BTL생활관(3동)",
+    "building_x": 35.15792255,
+    "building_y": 128.0998242,
+    "building_img": "https://firebasestorage.googleapis.com/v0/b/gmap-f88d5.appspot.com/o/building64.jpg?alt=media&token=0bccb062-bc0d-41ec-914d-98f834013a2a"
+  },
+  {
+    "campus": "가좌캠",
+    "building_num": 65,
+    "building_name": "학생생활관 - 제3BTL생활관(4동)",
+    "building_x": 35.15798805,
+    "building_y": 128.1005522,
+    "building_img": "https://firebasestorage.googleapis.com/v0/b/gmap-f88d5.appspot.com/o/building65.jpg?alt=media&token=461c989c-6deb-4868-a422-3826255ce284"
+  },
+  {
+    "campus": "가좌캠",
+    "building_num": 66,
+    "building_name": "학생생활관 5동",
+    "building_x": 35.15847674,
+    "building_y": 128.0988439,
+    "building_img": "https://firebasestorage.googleapis.com/v0/b/gmap-f88d5.appspot.com/o/building66.jpg?alt=media&token=383b3f77-b704-4253-888e-a24b53b7eed5"
+  },
+  {
+    "campus": "가좌캠",
+    "building_num": 67,
+    "building_name": "학생생활관 6, 7동",
+    "building_x": 35.1574912,
+    "building_y": 128.1014207,
+    "building_img": "https://firebasestorage.googleapis.com/v0/b/gmap-f88d5.appspot.com/o/building67.jpg?alt=media&token=ddd28f7a-f31b-488a-b58a-7a3ca42f7f89"
+  },
+  {
+    "campus": "가좌캠",
+    "building_num": 68,
+    "building_name": "게스트하우스",
+    "building_x": 35.15762636,
+    "building_y": 128.0991919,
+    "building_img": "https://firebasestorage.googleapis.com/v0/b/gmap-f88d5.appspot.com/o/building68.png?alt=media&token=607bba94-df47-4af8-bdac-12acb54eded8"
+  },
+  {
+    "campus": "가좌캠",
+    "building_num": 69,
+    "building_name": "영어캠프강의동",
+    "building_x": 35.15780372,
+    "building_y": 128.1009996,
+    "building_img": "https://firebasestorage.googleapis.com/v0/b/gmap-f88d5.appspot.com/o/building69.jpg?alt=media&token=35b14470-897b-4fca-9842-e8776560922e"
+  },
+  {
+    "campus": "가좌캠",
+    "building_num": 70,
+    "building_name": "LG개척관",
+    "building_x": 35.15809148,
+    "building_y": 128.0988387,
+    "building_img": "https://firebasestorage.googleapis.com/v0/b/gmap-f88d5.appspot.com/o/building70.png?alt=media&token=77e3f9a3-4749-4fb1-aedb-418995549aef"
+  },
+  {
+    "campus": "가좌캠",
+    "building_num": 71,
+    "building_name": "학생생활관 - 제1BTL생활관(8동)",
+    "building_x": 35.15662217,
+    "building_y": 128.1013404,
+    "building_img": "https://firebasestorage.googleapis.com/v0/b/gmap-f88d5.appspot.com/o/building71.jpg?alt=media&token=d83a1cf4-3c72-4b7b-a033-dbdd00ed629c"
+  },
+  {
+    "campus": "가좌캠",
+    "building_num": 72,
+    "building_name": "학생생활관 - 제1BTL생활관(9동)",
+    "building_x": 35.15667548,
+    "building_y": 128.10192,
+    "building_img": "https://firebasestorage.googleapis.com/v0/b/gmap-f88d5.appspot.com/o/building72.jpg?alt=media&token=b3132641-ab52-4ea5-a4b9-76935ab03a8e"
+  },
+  {
+    "campus": "가좌캠",
+    "building_num": 73,
+    "building_name": "학생생활관 - 제2BTL생활관(10동)",
+    "building_x": 35.15673165,
+    "building_y": 128.1009468,
+    "building_img": "https://firebasestorage.googleapis.com/v0/b/gmap-f88d5.appspot.com/o/building73.jpg?alt=media&token=4ec0fa50-5254-4d79-99f2-91ed76198b9b"
+  },
+  {
+    "campus": "가좌캠",
+    "building_num": 74,
+    "building_name": "학생생활관 - 제2BTL생활관(11동)",
+    "building_x": 35.15688578,
+    "building_y": 128.1003507,
+    "building_img": "https://firebasestorage.googleapis.com/v0/b/gmap-f88d5.appspot.com/o/building74.jpg?alt=media&token=8f27720a-af9a-4a22-8daf-59880f4009e9"
+  },
+  {
+    "campus": "가좌캠",
+    "building_num": 81,
+    "building_name": "부설중학교",
+    "building_x": 35.15818991,
+    "building_y": 128.097674,
+    "building_img": "https://firebasestorage.googleapis.com/v0/b/gmap-f88d5.appspot.com/o/building81.jpg?alt=media&token=c7bec739-744b-4171-bcba-fca6071ca894"
+  },
+  {
+    "campus": "가좌캠",
+    "building_num": 82,
+    "building_name": "부설고등학교",
+    "building_x": 35.15900078,
+    "building_y": 128.0966137,
+    "building_img": "https://firebasestorage.googleapis.com/v0/b/gmap-f88d5.appspot.com/o/building82.png?alt=media&token=5f97a97a-dae4-408b-876a-10b0296237cb"
+  },
+  {
+    "campus": "가좌캠",
+    "building_num": 101,
+    "building_name": "인문1호관",
+    "building_x": 35.15520966,
+    "building_y": 128.1003172,
+    "building_img": "https://firebasestorage.googleapis.com/v0/b/gmap-f88d5.appspot.com/o/building101.jpg?alt=media&token=27872147-ca33-43e0-8566-ec1be33d011c"
+  },
+  {
+    "campus": "가좌캠",
+    "building_num": 102,
+    "building_name": "인문2호관",
+    "building_x": 35.15507035,
+    "building_y": 128.0997776,
+    "building_img": "https://firebasestorage.googleapis.com/v0/b/gmap-f88d5.appspot.com/o/building102.jpg?alt=media&token=d808acb9-3492-4360-bc53-92cfcfe795c9"
+  },
+  {
+    "campus": "가좌캠",
+    "building_num": 151,
+    "building_name": "사회과학관",
+    "building_x": 35.15467315,
+    "building_y": 128.1003429,
+    "building_img": "https://firebasestorage.googleapis.com/v0/b/gmap-f88d5.appspot.com/o/building151.jpg?alt=media&token=1f396a63-8952-41d9-b55b-f250cf7fa76c"
+  },
+  {
+    "campus": "가좌캠",
+    "building_num": 201,
+    "building_name": "경영학관",
+    "building_x": 35.15396704,
+    "building_y": 128.0996914,
+    "building_img": "https://firebasestorage.googleapis.com/v0/b/gmap-f88d5.appspot.com/o/building201.jpg?alt=media&token=b47a4a94-a80e-46ff-88a7-aa783cd1aebf"
+  },
+  {
+    "campus": "가좌캠",
+    "building_num": 251,
+    "building_name": "법학관",
+    "building_x": 35.15433458,
+    "building_y": 128.0999103,
+    "building_img": "https://firebasestorage.googleapis.com/v0/b/gmap-f88d5.appspot.com/o/building251.jpg?alt=media&token=9fc5bcf1-0550-4aec-b241-48196c8cede0"
+  },
+  {
+    "campus": "가좌캠",
+    "building_num": 252,
+    "building_name": "대경학술관",
+    "building_x": 35.15423838,
+    "building_y": 128.1005785,
+    "building_img": "https://firebasestorage.googleapis.com/v0/b/gmap-f88d5.appspot.com/o/building252.jpg?alt=media&token=f65a5061-9b9c-4b7f-a5a5-c58d4cf8196f"
+  },
+  {
+    "campus": "가좌캠",
+    "building_num": 301,
+    "building_name": "교육1호관",
+    "building_x": 35.15437765,
+    "building_y": 128.0973473,
+    "building_img": "https://firebasestorage.googleapis.com/v0/b/gmap-f88d5.appspot.com/o/building301.jpg?alt=media&token=777cba49-ad2e-4b50-8a48-64ca353ab71b"
+  },
+  {
+    "campus": "가좌캠",
+    "building_num": 302,
+    "building_name": "교육2호관",
+    "building_x": 35.15483471,
+    "building_y": 128.0974369,
+    "building_img": "https://firebasestorage.googleapis.com/v0/b/gmap-f88d5.appspot.com/o/building302.jpg?alt=media&token=8fea3dff-7051-40aa-86c4-d1396ff29443"
+  },
+  {
+    "campus": "가좌캠",
+    "building_num": 303,
+    "building_name": "교육문화센터·평생교육원",
+    "building_x": 35.15529755,
+    "building_y": 128.0992736,
+    "building_img": "https://firebasestorage.googleapis.com/v0/b/gmap-f88d5.appspot.com/o/building303.jpg?alt=media&token=52ea5e2c-9fdf-4904-ad01-be854fa9cfb3"
+  },
+  {
+    "campus": "가좌캠",
+    "building_num": 304,
+    "building_name": "예술관",
+    "building_x": 35.15591825,
+    "building_y": 128.1011915,
+    "building_img": "https://firebasestorage.googleapis.com/v0/b/gmap-f88d5.appspot.com/o/building304.jpg?alt=media&token=9447fbb8-77fd-48b8-8010-ea93152777c5"
+  },
+  {
+    "campus": "가좌캠",
+    "building_num": 351,
+    "building_name": "과학1호관",
+    "building_x": 35.15519175,
+    "building_y": 128.0954312,
+    "building_img": "https://firebasestorage.googleapis.com/v0/b/gmap-f88d5.appspot.com/o/building351.jpg?alt=media&token=d2ee3e3d-74d0-4449-8a9a-b39c47194504"
+  },
+  {
+    "campus": "가좌캠",
+    "building_num": 352,
+    "building_name": "과학2호관",
+    "building_x": 35.15539531,
+    "building_y": 128.0962427,
+    "building_img": "https://firebasestorage.googleapis.com/v0/b/gmap-f88d5.appspot.com/o/building352.jpg?alt=media&token=6f03c085-3920-4947-9405-82031baf85be"
+  },
+  {
+    "campus": "가좌캠",
+    "building_num": 353,
+    "building_name": "과학3호관",
+    "building_x": 35.15497351,
+    "building_y": 128.0985307,
+    "building_img": "https://firebasestorage.googleapis.com/v0/b/gmap-f88d5.appspot.com/o/building353.jpg?alt=media&token=5d867bac-6c9f-428f-a9f7-1bde98ead41f"
+  },
+  {
+    "campus": "가좌캠",
+    "building_num": 354,
+    "building_name": "과학4호관",
+    "building_x": 35.1560656,
+    "building_y": 128.0968718,
+    "building_img": "https://firebasestorage.googleapis.com/v0/b/gmap-f88d5.appspot.com/o/building354.jpg?alt=media&token=c0899b5d-be6d-4d4b-b3e4-6e8792ff0ebd"
+  },
+  {
+    "campus": "가좌캠",
+    "building_num": 401,
+    "building_name": "공학1호관",
+    "building_x": 35.15479346,
+    "building_y": 128.0935262,
+    "building_img": "https://firebasestorage.googleapis.com/v0/b/gmap-f88d5.appspot.com/o/building401.jpg?alt=media&token=1e91c90c-52a2-4066-b8cf-13b6aa854450"
+  },
+  {
+    "campus": "가좌캠",
+    "building_num": 402,
+    "building_name": "공학2호관",
+    "building_x": 35.15528785,
+    "building_y": 128.0936732,
+    "building_img": "https://firebasestorage.googleapis.com/v0/b/gmap-f88d5.appspot.com/o/building402.jpg?alt=media&token=d9a81f9f-c2de-4826-bf70-9f1ac8a87b59"
+  },
+  {
+    "campus": "가좌캠",
+    "building_num": 403,
+    "building_name": "공학3호관",
+    "building_x": 35.15586788,
+    "building_y": 128.0938182,
+    "building_img": "https://firebasestorage.googleapis.com/v0/b/gmap-f88d5.appspot.com/o/building403.jpg?alt=media&token=b595a818-2bf3-4f78-8098-990698b41547"
+  },
+  {
+    "campus": "가좌캠",
+    "building_num": 404,
+    "building_name": "공학4호관",
+    "building_x": 35.15577775,
+    "building_y": 128.0948157,
+    "building_img": "https://firebasestorage.googleapis.com/v0/b/gmap-f88d5.appspot.com/o/building404.jpg?alt=media&token=ebb29095-ab6b-46aa-8c83-806363b4b85a"
+  },
+  {
+    "campus": "가좌캠",
+    "building_num": 405,
+    "building_name": "공학5호관",
+    "building_x": 35.15518396,
+    "building_y": 128.094698,
+    "building_img": "https://firebasestorage.googleapis.com/v0/b/gmap-f88d5.appspot.com/o/building405.jpg?alt=media&token=4afba36c-9321-461d-8e19-7f64a9ffd8f0"
+  },
+  {
+    "campus": "가좌캠",
+    "building_num": 406,
+    "building_name": "공학6호관",
+    "building_x": 35.15417016,
+    "building_y": 128.0941796,
+    "building_img": "https://firebasestorage.googleapis.com/v0/b/gmap-f88d5.appspot.com/o/building406.jpg?alt=media&token=b2555547-4724-41c9-89b5-70ea8a372c78"
+  },
+  {
+    "campus": "가좌캠",
+    "building_num": 407,
+    "building_name": "공학7호관",
+    "building_x": 35.15417187,
+    "building_y": 128.092742,
+    "building_img": "https://firebasestorage.googleapis.com/v0/b/gmap-f88d5.appspot.com/o/building407.jpg?alt=media&token=d463a8be-a2c4-465f-bd10-3a1aa7034f3d"
+  },
+  {
+    "campus": "가좌캠",
+    "building_num": 416,
+    "building_name": "부속공장",
+    "building_x": 35.15633664,
+    "building_y": 128.0948067,
+    "building_img": "https://firebasestorage.googleapis.com/v0/b/gmap-f88d5.appspot.com/o/building416.jpg?alt=media&token=b2408799-8bb6-4286-8baa-b20964386cad"
+  },
+  {
+    "campus": "가좌캠",
+    "building_num": 451,
+    "building_name": "농생1호관",
+    "building_x": 35.15221928,
+    "building_y": 128.0968223,
+    "building_img": "https://firebasestorage.googleapis.com/v0/b/gmap-f88d5.appspot.com/o/building451.jpg?alt=media&token=048cdbc9-2ba5-4719-804d-f1c4a35d2fea"
+  },
+  {
+    "campus": "가좌캠",
+    "building_num": 452,
+    "building_name": "농생2호관",
+    "building_x": 35.15279451,
+    "building_y": 128.0975466,
+    "building_img": "https://firebasestorage.googleapis.com/v0/b/gmap-f88d5.appspot.com/o/building452.jpg?alt=media&token=15691970-85ea-413a-ab09-1315f211bfc5"
+  },
+  {
+    "campus": "가좌캠",
+    "building_num": 453,
+    "building_name": "농생3호관",
+    "building_x": 35.15207572,
+    "building_y": 128.0972484,
+    "building_img": "https://firebasestorage.googleapis.com/v0/b/gmap-f88d5.appspot.com/o/building453.jpg?alt=media&token=4109e1c7-3dbd-41c9-ac74-2516125dbbfb"
+  },
+  {
+    "campus": "가좌캠",
+    "building_num": 454,
+    "building_name": "농생4호관",
+    "building_x": 35.15143993,
+    "building_y": 128.0968909,
+    "building_img": "https://firebasestorage.googleapis.com/v0/b/gmap-f88d5.appspot.com/o/building454.jpg?alt=media&token=2d9592ff-0910-4b28-b1a0-e64cbb364166"
+  },
+  {
+    "campus": "가좌캠",
+    "building_num": 455,
+    "building_name": "농생5호관",
+    "building_x": 35.15136411,
+    "building_y": 128.0975,
+    "building_img": "https://firebasestorage.googleapis.com/v0/b/gmap-f88d5.appspot.com/o/building455.png?alt=media&token=da7f05fe-0fc1-40bc-9c17-91ead647e89f"
+  },
+  {
+    "campus": "가좌캠",
+    "building_num": 456,
+    "building_name": "농생6호관",
+    "building_x": 35.15306281,
+    "building_y": 128.0957862,
+    "building_img": "https://firebasestorage.googleapis.com/v0/b/gmap-f88d5.appspot.com/o/building456.jpg?alt=media&token=f8e8b485-cd0c-47a8-ae73-40308784870c"
+  },
+  {
+    "campus": "가좌캠",
+    "building_num": 459,
+    "building_name": "농업생명과학관",
+    "building_x": 35.15207271,
+    "building_y": 128.0958881,
+    "building_img": "https://firebasestorage.googleapis.com/v0/b/gmap-f88d5.appspot.com/o/building459.jpg?alt=media&token=f091fbbf-ace9-41ea-b905-e281fb2c7ec2"
+  },
+  {
+    "campus": "가좌캠",
+    "building_num": 500,
+    "building_name": "농대식당",
+    "building_x": 35.15068394,
+    "building_y": 128.0979627,
+    "building_img": "https://firebasestorage.googleapis.com/v0/b/gmap-f88d5.appspot.com/o/building500.png?alt=media&token=e084e3df-d926-4d0c-8423-07c25437dc03"
+  },
+  {
+    "campus": "가좌캠",
+    "building_num": 501,
+    "building_name": "수의1호관",
+    "building_x": 35.15039525,
+    "building_y": 128.0971973,
+    "building_img": "https://firebasestorage.googleapis.com/v0/b/gmap-f88d5.appspot.com/o/building501.jpg?alt=media&token=7b63f2ae-73c4-4075-8a11-1872ba3a6e57"
+  },
+  {
+    "campus": "가좌캠",
+    "building_num": 505,
+    "building_name": "경상국립대학교 부속 동물의료원",
+    "building_x": 35.15077994,
+    "building_y": 128.0968173,
+    "building_img": "https://firebasestorage.googleapis.com/v0/b/gmap-f88d5.appspot.com/o/building505.png?alt=media&token=1065e2b7-fcb8-4013-901b-95a2d313d90c"
+  },
+  {
+    "campus": "가좌캠",
+    "building_num": 507,
+    "building_name": "경남야생동물센터",
+    "building_x": 35.15067179,
+    "building_y": 128.0960696,
+    "building_img": "https://firebasestorage.googleapis.com/v0/b/gmap-f88d5.appspot.com/o/building507.jpg?alt=media&token=eadce555-58ce-42a5-b197-ff43140f3a9e"
+  }
+]

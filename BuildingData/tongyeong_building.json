@@ -1,0 +1,114 @@
+[
+  {
+    "campus": "통영캠",
+    "building_num": 1,
+    "building_name": "정문",
+    "building_x": 34.83582211,
+    "building_y": 128.3998235,
+    "building_img": "https://firebasestorage.googleapis.com/v0/b/gmap-f88d5.appspot.com/o/tongyeong_1.jpg?alt=media&token=28554234-4a69-439c-baa2-0907068346a1"
+  },
+  {
+    "campus": "통영캠",
+    "building_num": 2,
+    "building_name": "수산관",
+    "building_x": 34.83583294,
+    "building_y": 128.3992744,
+    "building_img": "https://firebasestorage.googleapis.com/v0/b/gmap-f88d5.appspot.com/o/tongyeong_2.jpg?alt=media&token=d75771d6-e774-40b5-b7f7-0324caaddd50"
+  },
+  {
+    "campus": "통영캠",
+    "building_num": 3,
+    "building_name": "수산가공관",
+    "building_x": 34.83636276,
+    "building_y": 128.3992478,
+    "building_img": "https://firebasestorage.googleapis.com/v0/b/gmap-f88d5.appspot.com/o/tongyeong_3.jpg?alt=media&token=1d95ae46-b29b-444f-8656-f910fbffca92"
+  },
+  {
+    "campus": "통영캠",
+    "building_num": 5,
+    "building_name": "해양생물교육연구센터",
+    "building_x": 34.83590535,
+    "building_y": 128.3984639,
+    "building_img": "https://firebasestorage.googleapis.com/v0/b/gmap-f88d5.appspot.com/o/tongyeong_5.jpg?alt=media&token=afded576-e009-4610-9438-7de74ada7b00"
+  },
+  {
+    "campus": "통영캠",
+    "building_num": 6,
+    "building_name": "해양누리관",
+    "building_x": 34.83770935,
+    "building_y": 128.4001069,
+    "building_img": "https://firebasestorage.googleapis.com/v0/b/gmap-f88d5.appspot.com/o/tongyeong_6.jpg?alt=media&token=f2be8698-0c5c-4b6e-9806-552ef95141af"
+  },
+  {
+    "campus": "통영캠",
+    "building_num": 7,
+    "building_name": "체육관",
+    "building_x": 34.83802224,
+    "building_y": 128.3991556,
+    "building_img": "https://firebasestorage.googleapis.com/v0/b/gmap-f88d5.appspot.com/o/tongyeong_7.jpg?alt=media&token=f98a14a2-3917-43d0-a896-24e90e2e197c"
+  },
+  {
+    "campus": "통영캠",
+    "building_num": 9,
+    "building_name": "극저온기자재평가센터",
+    "building_x": 34.83818999,
+    "building_y": 128.3984807,
+    "building_img": "https://firebasestorage.googleapis.com/v0/b/gmap-f88d5.appspot.com/o/tongyeong_9.jpg?alt=media&token=7ab0f5e0-f918-4782-81f9-d957e48a4d45"
+  },
+  {
+    "campus": "통영캠",
+    "building_num": 10,
+    "building_name": "척양관",
+    "building_x": 34.83885635,
+    "building_y": 128.4002957,
+    "building_img": "https://firebasestorage.googleapis.com/v0/b/gmap-f88d5.appspot.com/o/tongyeong_10.jpg?alt=media&token=f21e7140-4e41-4b56-9822-20b562b93a83"
+  },
+  {
+    "campus": "통영캠",
+    "building_num": 11,
+    "building_name": "해양과학관",
+    "building_x": 34.83923863,
+    "building_y": 128.3995807,
+    "building_img": "https://firebasestorage.googleapis.com/v0/b/gmap-f88d5.appspot.com/o/tongyeong_11.jpg?alt=media&token=80ae3660-5322-48ce-a1f7-908ec6c43c63"
+  },
+  {
+    "campus": "통영캠",
+    "building_num": 12,
+    "building_name": "해양과학도서관",
+    "building_x": 34.8390818,
+    "building_y": 128.3991107,
+    "building_img": "https://firebasestorage.googleapis.com/v0/b/gmap-f88d5.appspot.com/o/tongyeong_12.jpg?alt=media&token=da3d702b-7a33-4952-9ef6-61956abb8412"
+  },
+  {
+    "campus": "통영캠",
+    "building_num": 13,
+    "building_name": "공학관",
+    "building_x": 34.83971945,
+    "building_y": 128.3991133,
+    "building_img": "https://firebasestorage.googleapis.com/v0/b/gmap-f88d5.appspot.com/o/tongyeong_13.jpg?alt=media&token=95e00377-23fc-4320-b295-de82c2c0ade7"
+  },
+  {
+    "campus": "통영캠",
+    "building_num": 15,
+    "building_name": "학생생활관",
+    "building_x": 34.83971312,
+    "building_y": 128.3978998,
+    "building_img": "https://firebasestorage.googleapis.com/v0/b/gmap-f88d5.appspot.com/o/tongyeong_15.jpg?alt=media&token=d91fc2a2-39eb-42ac-85c9-f695926431e6"
+  },
+  {
+    "campus": "통영캠",
+    "building_num": 16,
+    "building_name": "여학생생활관",
+    "building_x": 34.8390643,
+    "building_y": 128.3978888,
+    "building_img": "https://firebasestorage.googleapis.com/v0/b/gmap-f88d5.appspot.com/o/tongyeong_16.jpg?alt=media&token=27198138-229b-46f3-a1cd-acab1add69b7"
+  },
+  {
+    "campus": "통영캠",
+    "building_num": 17,
+    "building_name": "수자원연구센터",
+    "building_x": 34.83623254,
+    "building_y": 128.4011641,
+    "building_img": "https://firebasestorage.googleapis.com/v0/b/gmap-f88d5.appspot.com/o/tongyeong_17.jpg?alt=media&token=4a412305-4efb-4f88-a2ba-0b81c2e93829"
+  }
+]

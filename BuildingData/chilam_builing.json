@@ -1,0 +1,258 @@
+[
+  {
+    "campus": "칠암캠",
+    "building_num": 1000,
+    "building_name": "정문",
+    "building_x": 35.17909906,
+    "building_y": 128.0948045,
+    "building_img": "https://firebasestorage.googleapis.com/v0/b/gmap-f88d5.appspot.com/o/chilam.png?alt=media&token=28fa9263-0665-4a12-9837-bab1a14f768a"
+  },
+  {
+    "campus": "칠암캠",
+    "building_num": 1001,
+    "building_name": "후문",
+    "building_x": 35.18043306,
+    "building_y": 128.0913012,
+    "building_img": "https://firebasestorage.googleapis.com/v0/b/gmap-f88d5.appspot.com/o/chilam.png?alt=media&token=28fa9263-0665-4a12-9837-bab1a14f768a"
+  },
+  {
+    "campus": "칠암캠",
+    "building_num": 1002,
+    "building_name": "운동장",
+    "building_x": 35.18141088,
+    "building_y": 128.09281,
+    "building_img": "https://firebasestorage.googleapis.com/v0/b/gmap-f88d5.appspot.com/o/chilam.png?alt=media&token=28fa9263-0665-4a12-9837-bab1a14f768a"
+  },
+  {
+    "campus": "칠암캠",
+    "building_num": 1,
+    "building_name": "100주년 기념관",
+    "building_x": 35.17967353,
+    "building_y": 128.0955641,
+    "building_img": "https://firebasestorage.googleapis.com/v0/b/gmap-f88d5.appspot.com/o/chilam_1.jpg?alt=media&token=12037724-e060-4468-b210-7db3fdd82f23"
+  },
+  {
+    "campus": "칠암캠",
+    "building_num": 2,
+    "building_name": "학생회관, 종실관(평생교육원)",
+    "building_x": 35.18019524,
+    "building_y": 128.0951814,
+    "building_img": "https://firebasestorage.googleapis.com/v0/b/gmap-f88d5.appspot.com/o/chilam_2.jpg?alt=media&token=99ee2cde-4d10-4923-9ae1-263f523d0ac7"
+  },
+  {
+    "campus": "칠암캠",
+    "building_num": 3,
+    "building_name": "자연과학실험동",
+    "building_x": 35.18073278,
+    "building_y": 128.0955399,
+    "building_img": "https://firebasestorage.googleapis.com/v0/b/gmap-f88d5.appspot.com/o/chilam.png?alt=media&token=28fa9263-0665-4a12-9837-bab1a14f768a"
+  },
+  {
+    "campus": "칠암캠",
+    "building_num": 4,
+    "building_name": "칠암도서관",
+    "building_x": 35.18078033,
+    "building_y": 128.0947666,
+    "building_img": "https://firebasestorage.googleapis.com/v0/b/gmap-f88d5.appspot.com/o/chilam_28.jpg?alt=media&token=185a1e84-9e29-489b-b89f-ef63ea51b710"
+  },
+  {
+    "campus": "칠암캠",
+    "building_num": 5,
+    "building_name": "생명과학 2호관",
+    "building_x": 35.18129055,
+    "building_y": 128.0953553,
+    "building_img": "https://firebasestorage.googleapis.com/v0/b/gmap-f88d5.appspot.com/o/chilam.png?alt=media&token=28fa9263-0665-4a12-9837-bab1a14f768a"
+  },
+  {
+    "campus": "칠암캠",
+    "building_num": 6,
+    "building_name": "박물관",
+    "building_x": 35.18182847,
+    "building_y": 128.0954723,
+    "building_img": "https://firebasestorage.googleapis.com/v0/b/gmap-f88d5.appspot.com/o/chilam_6.jpg?alt=media&token=8e7ff03b-5334-401f-8ab5-7210aefa31e0"
+  },
+  {
+    "campus": "칠암캠",
+    "building_num": 7,
+    "building_name": "상경1호관",
+    "building_x": 35.18174812,
+    "building_y": 128.0948894,
+    "building_img": "https://firebasestorage.googleapis.com/v0/b/gmap-f88d5.appspot.com/o/chilam.png?alt=media&token=28fa9263-0665-4a12-9837-bab1a14f768a"
+  },
+  {
+    "campus": "칠암캠",
+    "building_num": 8,
+    "building_name": "상경2호관",
+    "building_x": 35.18159854,
+    "building_y": 128.0944867,
+    "building_img": "https://firebasestorage.googleapis.com/v0/b/gmap-f88d5.appspot.com/o/chilam.png?alt=media&token=28fa9263-0665-4a12-9837-bab1a14f768a"
+  },
+  {
+    "campus": "칠암캠",
+    "building_num": 9,
+    "building_name": "교양학관",
+    "building_x": 35.18196898,
+    "building_y": 128.0948841,
+    "building_img": "https://firebasestorage.googleapis.com/v0/b/gmap-f88d5.appspot.com/o/chilam.png?alt=media&token=28fa9263-0665-4a12-9837-bab1a14f768a"
+  },
+  {
+    "campus": "칠암캠",
+    "building_num": 10,
+    "building_name": "청담관(학군단)",
+    "building_x": 35.18232621,
+    "building_y": 128.0952485,
+    "building_img": "https://firebasestorage.googleapis.com/v0/b/gmap-f88d5.appspot.com/o/chilam.png?alt=media&token=28fa9263-0665-4a12-9837-bab1a14f768a"
+  },
+  {
+    "campus": "칠암캠",
+    "building_num": 11,
+    "building_name": "자연과학 1호관",
+    "building_x": 35.18197442,
+    "building_y": 128.0942832,
+    "building_img": "https://firebasestorage.googleapis.com/v0/b/gmap-f88d5.appspot.com/o/chilam.png?alt=media&token=28fa9263-0665-4a12-9837-bab1a14f768a"
+  },
+  {
+    "campus": "칠암캠",
+    "building_num": 12,
+    "building_name": "제3생활관",
+    "building_x": 35.18262658,
+    "building_y": 128.0949231,
+    "building_img": "https://firebasestorage.googleapis.com/v0/b/gmap-f88d5.appspot.com/o/chilam_12.jpg?alt=media&token=5d6ea370-d5dc-429a-b76b-e38eff589d1f"
+  },
+  {
+    "campus": "칠암캠",
+    "building_num": 13,
+    "building_name": "제2생활관",
+    "building_x": 35.18224307,
+    "building_y": 128.0939766,
+    "building_img": "https://firebasestorage.googleapis.com/v0/b/gmap-f88d5.appspot.com/o/chilam_13.jpg?alt=media&token=88d69413-1a09-49e0-9176-1954fceb77c5"
+  },
+  {
+    "campus": "칠암캠",
+    "building_num": 14,
+    "building_name": "제1생활관",
+    "building_x": 35.1824525,
+    "building_y": 128.0937407,
+    "building_img": "https://firebasestorage.googleapis.com/v0/b/gmap-f88d5.appspot.com/o/chilam_14.jpg?alt=media&token=472c6369-4648-4966-88f7-0d7320344bb9"
+  },
+  {
+    "campus": "칠암캠",
+    "building_num": 15,
+    "building_name": "구)본관",
+    "building_x": 35.18092317,
+    "building_y": 128.0939205,
+    "building_img": "https://firebasestorage.googleapis.com/v0/b/gmap-f88d5.appspot.com/o/chilam_15.jpg?alt=media&token=0ae7b8b4-834b-42eb-84bd-b94c38dc4337"
+  },
+  {
+    "campus": "칠암캠",
+    "building_num": 16,
+    "building_name": "대학본부",
+    "building_x": 35.18078517,
+    "building_y": 128.0932326,
+    "building_img": "https://firebasestorage.googleapis.com/v0/b/gmap-f88d5.appspot.com/o/chilam_16.jpg?alt=media&token=77205f53-a1dd-48be-a4e2-df77fd87d073"
+  },
+  {
+    "campus": "칠암캠",
+    "building_num": 17,
+    "building_name": "체육관",
+    "building_x": 35.18052009,
+    "building_y": 128.0926444,
+    "building_img": "https://firebasestorage.googleapis.com/v0/b/gmap-f88d5.appspot.com/o/chilam.png?alt=media&token=28fa9263-0665-4a12-9837-bab1a14f768a"
+  },
+  {
+    "campus": "칠암캠",
+    "building_num": 18,
+    "building_name": "공학 1호관",
+    "building_x": 35.18026919,
+    "building_y": 128.0919824,
+    "building_img": "https://firebasestorage.googleapis.com/v0/b/gmap-f88d5.appspot.com/o/chilam_18.jpg?alt=media&token=7c9ecd42-e280-4bbe-9ea2-32cc5d9d3e7b"
+  },
+  {
+    "campus": "칠암캠",
+    "building_num": 19,
+    "building_name": "파워플랜트",
+    "building_x": 35.18004696,
+    "building_y": 128.0916391,
+    "building_img": "https://firebasestorage.googleapis.com/v0/b/gmap-f88d5.appspot.com/o/chilam.png?alt=media&token=28fa9263-0665-4a12-9837-bab1a14f768a"
+  },
+  {
+    "campus": "칠암캠",
+    "building_num": 20,
+    "building_name": "공학 2호관",
+    "building_x": 35.17966044,
+    "building_y": 128.0920237,
+    "building_img": "https://firebasestorage.googleapis.com/v0/b/gmap-f88d5.appspot.com/o/chilam_20.jpg?alt=media&token=f380f036-11d7-451e-810c-a9585c5cc157"
+  },
+  {
+    "campus": "칠암캠",
+    "building_num": 21,
+    "building_name": "생명과학 1호관",
+    "building_x": 35.18034181,
+    "building_y": 128.0934237,
+    "building_img": "https://firebasestorage.googleapis.com/v0/b/gmap-f88d5.appspot.com/o/chilam.png?alt=media&token=28fa9263-0665-4a12-9837-bab1a14f768a"
+  },
+  {
+    "campus": "칠암캠",
+    "building_num": 22,
+    "building_name": "공동실험실습관",
+    "building_x": 35.17990628,
+    "building_y": 128.093745,
+    "building_img": "https://firebasestorage.googleapis.com/v0/b/gmap-f88d5.appspot.com/o/chilam_22.jpg?alt=media&token=2aedc17d-06ad-41d9-9ac5-b4d65f512742"
+  },
+  {
+    "campus": "칠암캠",
+    "building_num": 23,
+    "building_name": "공학 3호관",
+    "building_x": 35.17973764,
+    "building_y": 128.0929578,
+    "building_img": "https://firebasestorage.googleapis.com/v0/b/gmap-f88d5.appspot.com/o/chilam.png?alt=media&token=28fa9263-0665-4a12-9837-bab1a14f768a"
+  },
+  {
+    "campus": "칠암캠",
+    "building_num": 24,
+    "building_name": "공학 4호관",
+    "building_x": 35.17941615,
+    "building_y": 128.0921274,
+    "building_img": "https://firebasestorage.googleapis.com/v0/b/gmap-f88d5.appspot.com/o/chilam.png?alt=media&token=28fa9263-0665-4a12-9837-bab1a14f768a"
+  },
+  {
+    "campus": "칠암캠",
+    "building_num": 25,
+    "building_name": "자동차실습장",
+    "building_x": 35.17924077,
+    "building_y": 128.0920867,
+    "building_img": "https://firebasestorage.googleapis.com/v0/b/gmap-f88d5.appspot.com/o/chilam.png?alt=media&token=28fa9263-0665-4a12-9837-bab1a14f768a"
+  },
+  {
+    "campus": "칠암캠",
+    "building_num": 26,
+    "building_name": "인테리어실습장",
+    "building_x": 35.17908195,
+    "building_y": 128.092208,
+    "building_img": "https://firebasestorage.googleapis.com/v0/b/gmap-f88d5.appspot.com/o/chilam.png?alt=media&token=28fa9263-0665-4a12-9837-bab1a14f768a"
+  },
+  {
+    "campus": "칠암캠",
+    "building_num": 27,
+    "building_name": "공학4호관",
+    "building_x": 35.17935255,
+    "building_y": 28.09318318,
+    "building_img": "https://firebasestorage.googleapis.com/v0/b/gmap-f88d5.appspot.com/o/chilam.png?alt=media&token=28fa9263-0665-4a12-9837-bab1a14f768a"
+  },
+  {
+    "campus": "칠암캠",
+    "building_num": 28,
+    "building_name": "산학협력관, 교육학습관 및 평생교육원",
+    "building_x": 35.17950221,
+    "building_y": 128.0970658,
+    "building_img": "https://firebasestorage.googleapis.com/v0/b/gmap-f88d5.appspot.com/o/chilam_28.jpg?alt=media&token=185a1e84-9e29-489b-b89f-ef63ea51b710"
+  },
+  {
+    "campus": "칠암캠",
+    "building_num": 29,
+    "building_name": "제4생활관",
+    "building_x": 35.17879409,
+    "building_y": 128.0961369,
+    "building_img": "https://firebasestorage.googleapis.com/v0/b/gmap-f88d5.appspot.com/o/chilam.png?alt=media&token=28fa9263-0665-4a12-9837-bab1a14f768a"
+  }
+]

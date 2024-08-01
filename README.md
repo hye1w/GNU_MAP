@@ -19,22 +19,21 @@
 - 건물 위치 마커 표시
 - 즐겨찾기 기능
 
-## 📽️ 개발 결과 영상
->#### 전체 화면으로 확인 시 화질 개선됩니다.
+## 📽️ 개발 결과
 
-#### · 메인페이지
-- 건물번호 검색
-<img src="https://github.com/hye1w/GNU_map/assets/105777703/35fd0ccd-bc7c-4bc4-bd88-6eeaa481e39e.gif" width="300" height="400"/> 
+#### 메인페이지
+- 건물 검색
+<img src = "https://github.com/hye1w/IMAGES/blob/main/GNU%20MAP/%EB%A9%94%EC%9D%B8.jpg?raw=true" width="300px" height="600"/>
 
-- 건물명 검색
-<img src="https://github.com/hye1w/GNU_map/assets/105777703/8be97a89-067e-4c91-906c-3fb8a46521d6.gif" width="300" height="400"/>
-
-- 즐겨찾기 삭제
-<img src="https://github.com/hye1w/GNU_map/assets/105777703/c24cd74e-123e-4b46-a852-a36103a39cd4.gif" width="300" height="400"/>
+- 캠퍼스 선택
+<img src="https://github.com/hye1w/IMAGES/blob/main/GNU%20MAP/%EB%A9%94%EC%9D%B8%20%EC%85%80%EB%A0%89%ED%8A%B8%EB%B0%95%EC%8A%A4.jpg?raw=true" width="300" height="600"/>
  
-#### · 건물 상세 정보 페이지
-- 즐겨찾기 추가
-<img src="https://github.com/hye1w/GNU_map/assets/105777703/e83e8674-ba5a-4d63-8a07-80fa28a5ecca.gif" width="300" height="400"/>
+#### 검색 결과 페이지
+<img src="https://github.com/hye1w/IMAGES/blob/main/GNU%20MAP/%EA%B2%B0%EA%B3%BC.jpg?raw=true" width="300" height="600"/>
+
+#### 건물 상세 정보 페이지
+- 건물 정보 상세보기 & 즐겨찾기 추가
+<img src="https://github.com/hye1w/IMAGES/blob/main/GNU%20MAP/%EC%A6%90%EA%B2%A8%EC%B0%BE%EA%B8%B0.jpg?raw=true" width="300" height="600"/>
 
 ## 📁DataBase 구조
 ```java

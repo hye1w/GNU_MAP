@@ -23,17 +23,17 @@
 
 #### 메인페이지
 - 건물 검색
-<img src = "https://github.com/hye1w/IMAGES/blob/main/GNU%20MAP/%EB%A9%94%EC%9D%B8.jpg?raw=true" width="300px" height="600"/>
+<img src = "https://github.com/user-attachments/assets/b27cf0f6-6dc7-46e7-b089-6f903e6d02a6" width="300px" height="600"/>
 
 - 캠퍼스 선택
-<img src="https://github.com/hye1w/IMAGES/blob/main/GNU%20MAP/%EB%A9%94%EC%9D%B8%20%EC%85%80%EB%A0%89%ED%8A%B8%EB%B0%95%EC%8A%A4.jpg?raw=true" width="300" height="600"/>
+<img src="https://github.com/user-attachments/assets/9783058d-acf6-48be-9e4d-af26e288d76b" width="300" height="600"/>
  
 #### 검색 결과 페이지
-<img src="https://github.com/hye1w/IMAGES/blob/main/GNU%20MAP/%EA%B2%B0%EA%B3%BC.jpg?raw=true" width="300" height="600"/>
+<img src="https://github.com/user-attachments/assets/9676d372-ad96-4403-8394-8add1c5de82f" width="300" height="600"/>
 
 #### 건물 상세 정보 페이지
 - 건물 정보 상세보기 & 즐겨찾기 추가
-<img src="https://github.com/hye1w/IMAGES/blob/main/GNU%20MAP/%EC%A6%90%EA%B2%A8%EC%B0%BE%EA%B8%B0.jpg?raw=true" width="300" height="600"/>
+<img src="https://github.com/user-attachments/assets/206d8d51-2990-400a-a761-dca241d4cd7a" width="300" height="600"/>
 
 ## 📁DataBase 구조
 ```java
